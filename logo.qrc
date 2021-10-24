@@ -1,0 +1,11 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+	<qresource>
+		<file>logo_for_buttons/operations.png</file>
+		<file>logo_for_buttons/books.png</file>
+		<file>logo_for_buttons/books.png</file>
+		<file>logo_for_buttons/clients.png</file>
+		<file>logo_for_buttons/employee.png</file>
+	</qresource>
+</RCC>
+
