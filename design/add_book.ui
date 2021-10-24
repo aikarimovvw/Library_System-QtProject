@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(150, 55, 0);</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLineEdit" name="ledit_title">
     <property name="geometry">
@@ -22,6 +25,9 @@
       <width>141</width>
       <height>31</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="ledit_id">
@@ -33,6 +39,9 @@
       <height>31</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
    </widget>
    <widget class="QLineEdit" name="ledit_genre">
     <property name="geometry">
@@ -43,6 +52,9 @@
       <height>31</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
    </widget>
    <widget class="QLineEdit" name="ledit_author">
     <property name="geometry">
@@ -52,6 +64,9 @@
       <width>141</width>
       <height>31</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
     </property>
    </widget>
    <widget class="QLabel" name="lbl_title">
@@ -115,6 +130,9 @@
       <height>131</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
    </widget>
    <widget class="QLabel" name="label_5">
     <property name="geometry">
@@ -137,6 +155,9 @@
       <width>121</width>
       <height>31</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>Сохранить</string>

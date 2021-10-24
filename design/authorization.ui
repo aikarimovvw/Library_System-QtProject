@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(150, 55, 0);</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="btn_enter">
     <property name="geometry">
@@ -22,6 +25,9 @@
       <width>171</width>
       <height>31</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>Войти</string>
@@ -36,6 +42,9 @@
       <height>41</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
     <property name="placeholderText">
      <string>Введите имя пользователя</string>
     </property>
@@ -48,6 +57,9 @@
       <width>261</width>
       <height>41</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
     </property>
     <property name="placeholderText">
      <string>Введите пароль</string>

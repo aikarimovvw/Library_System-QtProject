@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(0, 0, 127);</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="lbl_add_name_c">
     <property name="geometry">
@@ -22,6 +25,11 @@
       <width>61</width>
       <height>21</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>Имя</string>
@@ -36,6 +44,11 @@
       <height>21</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
     <property name="text">
      <string>Номер</string>
     </property>
@@ -48,6 +61,11 @@
       <width>61</width>
       <height>21</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>Почта</string>
@@ -62,6 +80,9 @@
       <height>31</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
     <property name="placeholderText">
      <string>Введите имя</string>
     </property>
@@ -74,6 +95,9 @@
       <width>131</width>
       <height>31</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
     </property>
     <property name="placeholderText">
      <string>Введите номер</string>
@@ -88,6 +112,9 @@
       <height>31</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
     <property name="placeholderText">
      <string>Введите почту</string>
     </property>
@@ -100,6 +127,9 @@
       <width>111</width>
       <height>31</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>Добавить</string>
