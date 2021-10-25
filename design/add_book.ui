@@ -14,7 +14,7 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(150, 55, 0);</string>
+   <string notr="true">background-color: rgb(75, 75, 75);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLineEdit" name="ledit_title">
@@ -27,7 +27,8 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);</string>
+     <string notr="true">alternate-background-color: rgb(85, 170, 255);
+background-color: rgb(179, 179, 179);</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="ledit_id">
@@ -40,7 +41,8 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);</string>
+     <string notr="true">alternate-background-color: rgb(85, 170, 255);
+background-color: rgb(179, 179, 179);</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="ledit_genre">
@@ -53,7 +55,8 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);</string>
+     <string notr="true">alternate-background-color: rgb(85, 170, 255);
+background-color: rgb(179, 179, 179);</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="ledit_author">
@@ -66,7 +69,8 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);</string>
+     <string notr="true">alternate-background-color: rgb(85, 170, 255);
+background-color: rgb(179, 179, 179);</string>
     </property>
    </widget>
    <widget class="QLabel" name="lbl_title">
@@ -157,7 +161,10 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);</string>
+     <string notr="true">background-color: rgb(255, 85, 0);
+color: rgb(75, 75, 75);
+font: 9pt &quot;Segoe UI&quot;;
+border-radius: 5px;</string>
     </property>
     <property name="text">
      <string>Сохранить</string>
@@ -170,7 +177,7 @@
      <x>0</x>
      <y>0</y>
      <width>532</width>
-     <height>21</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>

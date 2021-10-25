@@ -14,7 +14,7 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(0, 0, 127);</string>
+   <string notr="true">background-color: rgb(75, 75, 75);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="lbl_add_name_c">
@@ -81,7 +81,8 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);</string>
+     <string notr="true">alternate-background-color: rgb(85, 170, 255);
+background-color: rgb(179, 179, 179);</string>
     </property>
     <property name="placeholderText">
      <string>Введите имя</string>
@@ -97,7 +98,8 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);</string>
+     <string notr="true">alternate-background-color: rgb(85, 170, 255);
+background-color: rgb(179, 179, 179);</string>
     </property>
     <property name="placeholderText">
      <string>Введите номер</string>
@@ -113,7 +115,8 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);</string>
+     <string notr="true">alternate-background-color: rgb(85, 170, 255);
+background-color: rgb(179, 179, 179);</string>
     </property>
     <property name="placeholderText">
      <string>Введите почту</string>
@@ -129,7 +132,10 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);</string>
+     <string notr="true">background-color: rgb(255, 85, 0);
+color: rgb(75, 75, 75);
+font: 9pt &quot;Segoe UI&quot;;
+border-radius: 5px;</string>
     </property>
     <property name="text">
      <string>Добавить</string>
@@ -142,7 +148,7 @@
      <x>0</x>
      <y>0</y>
      <width>329</width>
-     <height>21</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>

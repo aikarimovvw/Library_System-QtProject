@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>966</width>
-    <height>576</height>
+    <height>594</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,55 +17,57 @@
    <string notr="true">background-color: rgb(85, 255, 255);
 background-color: rgb(0, 0, 86);
 color: rgb(0, 0, 75);
-background-color: rgb(0, 0, 108);</string>
+background-color: rgb(75, 75, 75);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(75, 75, 75);</string>
+   </property>
    <widget class="QPushButton" name="btn_main_oper">
     <property name="geometry">
      <rect>
-      <x>150</x>
+      <x>130</x>
       <y>0</y>
-      <width>131</width>
+      <width>161</width>
       <height>61</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(255, 255, 255);
-font: 8pt &quot;Segoe UI&quot;;</string>
+font: 20pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(90, 90, 90);
+background-color: rgb(70, 212, 212);
+color: rgb(75, 75, 75);
+font: 14pt &quot;Segoe UI&quot;;
+border-radius: 5px;</string>
     </property>
     <property name="text">
-     <string>Операция</string>
-    </property>
-    <property name="icon">
-     <iconset resource="logo.qrc">
-      <normaloff>:/logo_for_buttons/operations.png</normaloff>:/logo_for_buttons/operations.png</iconset>
+     <string>📄 Операция</string>
     </property>
     <property name="iconSize">
      <size>
-      <width>40</width>
-      <height>40</height>
+      <width>80</width>
+      <height>80</height>
      </size>
     </property>
    </widget>
    <widget class="QPushButton" name="btn_main_books">
     <property name="geometry">
      <rect>
-      <x>350</x>
+      <x>340</x>
       <y>0</y>
-      <width>131</width>
+      <width>161</width>
       <height>61</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);
-font: 8pt &quot;Segoe UI&quot;;</string>
+     <string notr="true">background-color: rgb(70, 212, 212);
+color: rgb(75, 75, 75);
+font: 14pt &quot;Segoe UI&quot;;
+border-radius: 5px;</string>
     </property>
     <property name="text">
-     <string>   Книги</string>
-    </property>
-    <property name="icon">
-     <iconset resource="logo.qrc">
-      <normaloff>:/logo_for_buttons/books.png</normaloff>:/logo_for_buttons/books.png</iconset>
+     <string> 📚  Книги</string>
     </property>
     <property name="iconSize">
      <size>
@@ -77,25 +79,20 @@ font: 8pt &quot;Segoe UI&quot;;</string>
    <widget class="QPushButton" name="btn_main_clients">
     <property name="geometry">
      <rect>
-      <x>540</x>
+      <x>550</x>
       <y>0</y>
-      <width>131</width>
+      <width>161</width>
       <height>61</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);
-font: 8pt &quot;Segoe UI&quot;;
-font: 75 8pt &quot;MS Shell Dlg 2&quot;;
-font: 75 8pt &quot;MS Shell Dlg 2&quot;;
-font: 8pt &quot;Segoe UI&quot;;</string>
+     <string notr="true">background-color: rgb(70, 212, 212);
+color: rgb(75, 75, 75);
+font: 14pt &quot;Segoe UI&quot;;
+border-radius: 5px;</string>
     </property>
     <property name="text">
-     <string>Читатели</string>
-    </property>
-    <property name="icon">
-     <iconset resource="logo.qrc">
-      <normaloff>:/logo_for_buttons/clients.png</normaloff>:/logo_for_buttons/clients.png</iconset>
+     <string>🧑‍🎓 Читатели</string>
     </property>
     <property name="iconSize">
      <size>
@@ -107,33 +104,29 @@ font: 8pt &quot;Segoe UI&quot;;</string>
    <widget class="QPushButton" name="btn_main_empl">
     <property name="geometry">
      <rect>
-      <x>720</x>
+      <x>760</x>
       <y>0</y>
-      <width>131</width>
+      <width>161</width>
       <height>61</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>Segoe UI</family>
-      <pointsize>8</pointsize>
-      <weight>9</weight>
+      <pointsize>14</pointsize>
+      <weight>50</weight>
       <italic>false</italic>
       <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);
-font: 8pt &quot;Segoe UI&quot;;
-font: 8pt &quot;Segoe UI&quot;;
-font: 75 8pt &quot;Segoe UI&quot;;</string>
+     <string notr="true">background-color: rgb(70, 212, 212);
+color: rgb(75, 75, 75);
+font: 14pt &quot;Segoe UI&quot;;
+border-radius: 5px;</string>
     </property>
     <property name="text">
-     <string>Сотрудники</string>
-    </property>
-    <property name="icon">
-     <iconset resource="logo.qrc">
-      <normaloff>:/logo_for_buttons/employee.png</normaloff>:/logo_for_buttons/employee.png</iconset>
+     <string>🧑‍💻 Сотрудники</string>
     </property>
     <property name="iconSize">
      <size>
@@ -145,10 +138,10 @@ font: 75 8pt &quot;Segoe UI&quot;;</string>
    <widget class="QTabWidget" name="tbl_wdgt_add_user">
     <property name="geometry">
      <rect>
-      <x>-10</x>
-      <y>70</y>
+      <x>0</x>
+      <y>60</y>
       <width>991</width>
-      <height>491</height>
+      <height>481</height>
      </rect>
     </property>
     <property name="font">
@@ -158,23 +151,20 @@ font: 75 8pt &quot;Segoe UI&quot;;</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(200, 133, 74);
-background-color: rgb(150, 55, 0);
-background-color: rgb(166, 55, 0);
-background-color: rgb(85, 0, 255);
-background-color: rgb(255, 255, 255);</string>
+     <string notr="true">background-color: rgb(75, 75, 75);</string>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="tab">
      <property name="styleSheet">
       <string notr="true">background-color: rgb(85, 0, 255);
+background-color: rgb(75, 75, 75);
 background-color: rgb(150, 50, 0);
 background-color: rgb(150, 50, 0);
 background-color: rgb(170, 0, 0);
 background-color: rgb(170, 0, 0);
-background-color: rgb(0, 85, 127);</string>
+background-color: rgb(75, 75, 75);</string>
      </property>
      <attribute name="title">
       <string>операция</string>
@@ -182,9 +172,9 @@ background-color: rgb(0, 85, 127);</string>
      <widget class="QTableWidget" name="operations_tbl_wid">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>70</y>
-        <width>601</width>
+        <x>0</x>
+        <y>60</y>
+        <width>751</width>
         <height>381</height>
        </rect>
       </property>
@@ -194,8 +184,7 @@ background-color: rgb(0, 85, 127);</string>
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 170, 255);
-background-color: rgb(255, 255, 255);</string>
+       <string notr="true">background-color: rgb(79, 238, 0);</string>
       </property>
       <column>
        <property name="text">
@@ -238,8 +227,10 @@ background-color: rgb(255, 255, 255);</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-font: 9pt &quot;Segoe UI&quot;;</string>
+       <string notr="true">background-color: rgb(255, 85, 0);
+color: rgb(75, 75, 75);
+font: 9pt &quot;Segoe UI&quot;;
+border-radius: 5px;</string>
       </property>
       <property name="text">
        <string>Добавить</string>
@@ -256,7 +247,7 @@ font: 9pt &quot;Segoe UI&quot;;</string>
       </property>
       <property name="styleSheet">
        <string notr="true">alternate-background-color: rgb(85, 170, 255);
-background-color: rgb(255, 255, 255);</string>
+background-color: rgb(179, 179, 179);</string>
       </property>
       <property name="placeholderText">
        <string>Введите название книги</string>
@@ -272,7 +263,7 @@ background-color: rgb(255, 255, 255);</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
+       <string notr="true">background-color: rgb(179, 179, 179);</string>
       </property>
       <item>
        <property name="text">
@@ -295,7 +286,7 @@ background-color: rgb(255, 255, 255);</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
+       <string notr="true">background-color: rgb(179, 179, 179);</string>
       </property>
       <item>
        <property name="text">
@@ -377,9 +368,9 @@ background-color: rgb(255, 255, 255);</string>
      <widget class="QLabel" name="label_3">
       <property name="geometry">
        <rect>
-        <x>610</x>
+        <x>600</x>
         <y>10</y>
-        <width>81</width>
+        <width>91</width>
         <height>31</height>
        </rect>
       </property>
@@ -400,7 +391,7 @@ background-color: rgb(255, 255, 255);</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
+       <string notr="true">background-color: rgb(179, 179,179);</string>
       </property>
       <property name="text">
        <string/>
@@ -412,7 +403,7 @@ background-color: rgb(255, 255, 255);</string>
     </widget>
     <widget class="QWidget" name="tab_2">
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(150, 50, 0);</string>
+      <string notr="true">background-color: rgb(75, 75, 75);</string>
      </property>
      <attribute name="title">
       <string>книга</string>
@@ -420,10 +411,10 @@ background-color: rgb(255, 255, 255);</string>
      <widget class="QTabWidget" name="tbl_wdgt_all_books">
       <property name="geometry">
        <rect>
-        <x>10</x>
+        <x>-10</x>
         <y>0</y>
-        <width>961</width>
-        <height>441</height>
+        <width>981</width>
+        <height>471</height>
        </rect>
       </property>
       <property name="currentIndex">
@@ -443,7 +434,7 @@ background-color: rgb(255, 255, 255);</string>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
+         <string notr="true">background-color: rgb(79, 238, 0);</string>
         </property>
         <column>
          <property name="text">
@@ -476,7 +467,10 @@ background-color: rgb(255, 255, 255);</string>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
+         <string notr="true">background-color: rgb(255, 85, 0);
+color: rgb(75, 75, 75);
+font: 9pt &quot;Segoe UI&quot;;
+border-radius: 5px;</string>
         </property>
         <property name="text">
          <string>Добавить книгу</string>
@@ -497,7 +491,8 @@ background-color: rgb(255, 255, 255);</string>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
+         <string notr="true">alternate-background-color: rgb(85, 170, 255);
+background-color: rgb(179, 179, 179);</string>
         </property>
         <property name="placeholderText">
          <string>Введите название</string>
@@ -513,7 +508,8 @@ background-color: rgb(255, 255, 255);</string>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
+         <string notr="true">alternate-background-color: rgb(85, 170, 255);
+background-color: rgb(179, 179, 179);</string>
         </property>
         <property name="placeholderText">
          <string>Введите название</string>
@@ -550,7 +546,17 @@ background-color: rgb(255, 255, 255);</string>
         <property name="font">
          <font>
           <family>Segoe UI</family>
+          <pointsize>9</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
          </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 85, 0);
+color: rgb(75, 75, 75);
+font: 9pt &quot;Segoe UI&quot;;
+border-radius: 5px;</string>
         </property>
         <property name="text">
          <string>Поиск</string>
@@ -585,7 +591,8 @@ background-color: rgb(255, 255, 255);</string>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
+         <string notr="true">alternate-background-color: rgb(85, 170, 255);
+background-color: rgb(179, 179, 179);</string>
         </property>
         <property name="text">
          <string/>
@@ -604,7 +611,8 @@ background-color: rgb(255, 255, 255);</string>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
+         <string notr="true">alternate-background-color: rgb(85, 170, 255);
+background-color: rgb(179, 179, 179);</string>
         </property>
         <property name="text">
          <string/>
@@ -623,7 +631,8 @@ background-color: rgb(255, 255, 255);</string>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
+         <string notr="true">alternate-background-color: rgb(85, 170, 255);
+background-color: rgb(179, 179, 179);</string>
         </property>
         <property name="placeholderText">
          <string>Введите автора</string>
@@ -634,8 +643,8 @@ background-color: rgb(255, 255, 255);</string>
          <rect>
           <x>460</x>
           <y>170</y>
-          <width>321</width>
-          <height>181</height>
+          <width>371</width>
+          <height>191</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -730,10 +739,17 @@ background-color: rgb(255, 255, 255);</string>
         <property name="font">
          <font>
           <family>Segoe UI</family>
+          <pointsize>9</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
+         <string notr="true">background-color: rgb(255, 85, 0);
+color: rgb(75, 75, 75);
+font: 9pt &quot;Segoe UI&quot;;
+border-radius: 5px;</string>
         </property>
         <property name="text">
          <string>Обновить</string>
@@ -744,20 +760,27 @@ background-color: rgb(255, 255, 255);</string>
          <rect>
           <x>150</x>
           <y>370</y>
-          <width>75</width>
+          <width>111</width>
           <height>23</height>
          </rect>
         </property>
         <property name="font">
          <font>
           <family>Segoe UI</family>
+          <pointsize>10</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
+         <string notr="true">background-color: rgb(255, 85, 0);
+color: rgb(75, 75, 75);
+font: 10pt &quot;Segoe UI&quot;;
+border-radius: 5px;</string>
         </property>
         <property name="text">
-         <string>Удалить</string>
+         <string>🗑️ Удалить</string>
         </property>
        </widget>
        <widget class="QLabel" name="label">
@@ -784,7 +807,7 @@ background-color: rgb(255, 255, 255);</string>
     </widget>
     <widget class="QWidget" name="tab_3">
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(150, 50, 0);</string>
+      <string notr="true">background-color: rgb(75, 75, 75);</string>
      </property>
      <attribute name="title">
       <string>читатель</string>
@@ -793,9 +816,9 @@ background-color: rgb(255, 255, 255);</string>
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>0</y>
+        <y>10</y>
         <width>991</width>
-        <height>451</height>
+        <height>471</height>
        </rect>
       </property>
       <property name="font">
@@ -804,10 +827,10 @@ background-color: rgb(255, 255, 255);</string>
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(150, 50, 0);</string>
+       <string notr="true">background-color: rgb(75, 75, 75);</string>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="tab_7">
        <attribute name="title">
@@ -818,13 +841,12 @@ background-color: rgb(255, 255, 255);</string>
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>311</width>
-          <height>411</height>
+          <width>381</width>
+          <height>421</height>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);
-font: 8pt &quot;Segoe UI&quot;;</string>
+         <string notr="true">background-color: rgb(79, 238, 0);</string>
         </property>
         <column>
          <property name="text">
@@ -845,15 +867,17 @@ font: 8pt &quot;Segoe UI&quot;;</string>
        <widget class="QPushButton" name="btn_add_client">
         <property name="geometry">
          <rect>
-          <x>630</x>
+          <x>620</x>
           <y>30</y>
-          <width>141</width>
+          <width>151</width>
           <height>41</height>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);
-font: 9pt &quot;Segoe UI&quot;;</string>
+         <string notr="true">background-color: rgb(255, 85, 0);
+color: rgb(75, 75, 75);
+font: 9pt &quot;Segoe UI&quot;;
+border-radius: 5px;</string>
         </property>
         <property name="text">
          <string>Добавить читателя</string>
@@ -874,7 +898,8 @@ font: 9pt &quot;Segoe UI&quot;;</string>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
+         <string notr="true">alternate-background-color: rgb(85, 170, 255);
+background-color: rgb(179, 179, 179);</string>
         </property>
         <property name="placeholderText">
          <string>Введите название</string>
@@ -890,7 +915,8 @@ font: 9pt &quot;Segoe UI&quot;;</string>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
+         <string notr="true">alternate-background-color: rgb(85, 170, 255);
+background-color: rgb(179, 179, 179);</string>
         </property>
         <property name="placeholderText">
          <string>Введите имя</string>
@@ -922,8 +948,10 @@ font: 9pt &quot;Segoe UI&quot;;</string>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">font: 9pt &quot;Segoe UI&quot;;
-background-color: rgb(255, 255, 255);</string>
+         <string notr="true">background-color: rgb(255, 85, 0);
+color: rgb(75, 75, 75);
+font: 9pt &quot;Segoe UI&quot;;
+border-radius: 5px;</string>
         </property>
         <property name="text">
          <string>Поиск</string>
@@ -955,7 +983,8 @@ background-color: rgb(255, 255, 255);</string>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
+         <string notr="true">alternate-background-color: rgb(85, 170, 255);
+background-color: rgb(179, 179, 179);</string>
         </property>
         <property name="placeholderText">
          <string>Введите номер</string>
@@ -971,7 +1000,8 @@ background-color: rgb(255, 255, 255);</string>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
+         <string notr="true">alternate-background-color: rgb(85, 170, 255);
+background-color: rgb(179, 179, 179);</string>
         </property>
         <property name="placeholderText">
          <string>Введите почту</string>
@@ -1031,13 +1061,15 @@ font: 8pt &quot;Segoe UI&quot;;</string>
          <rect>
           <x>20</x>
           <y>320</y>
-          <width>75</width>
+          <width>101</width>
           <height>23</height>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);
-font: 9pt &quot;Segoe UI&quot;;</string>
+         <string notr="true">background-color: rgb(255, 85, 0);
+color: rgb(75, 75, 75);
+font: 10pt &quot;Segoe UI&quot;;
+border-radius: 5px;</string>
         </property>
         <property name="text">
          <string>Обновить</string>
@@ -1046,18 +1078,20 @@ font: 9pt &quot;Segoe UI&quot;;</string>
        <widget class="QPushButton" name="btn_del_client">
         <property name="geometry">
          <rect>
-          <x>140</x>
+          <x>160</x>
           <y>320</y>
-          <width>75</width>
+          <width>101</width>
           <height>23</height>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);
-font: 9pt &quot;Segoe UI&quot;;</string>
+         <string notr="true">background-color: rgb(255, 85, 0);
+color: rgb(75, 75, 75);
+font: 10pt &quot;Segoe UI&quot;;
+border-radius: 5px;</string>
         </property>
         <property name="text">
-         <string>Удалить</string>
+         <string>🗑️ Удалить</string>
         </property>
        </widget>
       </widget>
@@ -1065,7 +1099,7 @@ font: 9pt &quot;Segoe UI&quot;;</string>
     </widget>
     <widget class="QWidget" name="tab_4">
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(150, 50, 0);</string>
+      <string notr="true">background-color: rgb(75, 75, 75);</string>
      </property>
      <attribute name="title">
       <string>сотрудник</string>
@@ -1073,11 +1107,14 @@ font: 9pt &quot;Segoe UI&quot;;</string>
      <widget class="QTabWidget" name="tb_wdgt_empl">
       <property name="geometry">
        <rect>
-        <x>0</x>
+        <x>-10</x>
         <y>0</y>
-        <width>981</width>
-        <height>441</height>
+        <width>991</width>
+        <height>451</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(75, 75, 75);</string>
       </property>
       <property name="currentIndex">
        <number>0</number>
@@ -1096,7 +1133,8 @@ font: 9pt &quot;Segoe UI&quot;;</string>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
+         <string notr="true">alternate-background-color: rgb(85, 170, 255);
+background-color: rgb(179, 179, 179);</string>
         </property>
         <property name="placeholderText">
          <string>Введите имя</string>
@@ -1112,7 +1150,8 @@ font: 9pt &quot;Segoe UI&quot;;</string>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
+         <string notr="true">alternate-background-color: rgb(85, 170, 255);
+background-color: rgb(179, 179, 179);</string>
         </property>
         <property name="placeholderText">
          <string>Введите почту</string>
@@ -1128,7 +1167,8 @@ font: 9pt &quot;Segoe UI&quot;;</string>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
+         <string notr="true">alternate-background-color: rgb(85, 170, 255);
+background-color: rgb(179, 179, 179);</string>
         </property>
         <property name="placeholderText">
          <string>Введите пароль</string>
@@ -1192,8 +1232,10 @@ font: 9pt &quot;Segoe UI&quot;;</string>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);
-font: 9pt &quot;Segoe UI&quot;;</string>
+         <string notr="true">background-color: rgb(255, 85, 0);
+color: rgb(75, 75, 75);
+font: 9pt &quot;Segoe UI&quot;;
+border-radius: 5px;</string>
         </property>
         <property name="text">
          <string>Добавить</string>
@@ -1207,9 +1249,9 @@ font: 9pt &quot;Segoe UI&quot;;</string>
        <widget class="QLabel" name="lbl_update_name_e">
         <property name="geometry">
          <rect>
-          <x>30</x>
+          <x>20</x>
           <y>20</y>
-          <width>71</width>
+          <width>81</width>
           <height>21</height>
          </rect>
         </property>
@@ -1223,9 +1265,9 @@ font: 9pt &quot;Segoe UI&quot;;</string>
        <widget class="QLabel" name="lbl_update_mail_e">
         <property name="geometry">
          <rect>
-          <x>30</x>
+          <x>20</x>
           <y>70</y>
-          <width>71</width>
+          <width>81</width>
           <height>21</height>
          </rect>
         </property>
@@ -1239,9 +1281,9 @@ font: 9pt &quot;Segoe UI&quot;;</string>
        <widget class="QLabel" name="lbl_update_pass_e_2">
         <property name="geometry">
          <rect>
-          <x>30</x>
+          <x>20</x>
           <y>110</y>
-          <width>71</width>
+          <width>81</width>
           <height>21</height>
          </rect>
         </property>
@@ -1262,7 +1304,8 @@ font: 9pt &quot;Segoe UI&quot;;</string>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
+         <string notr="true">alternate-background-color: rgb(85, 170, 255);
+background-color: rgb(179, 179, 179);</string>
         </property>
         <property name="placeholderText">
          <string>Введите имя</string>
@@ -1278,7 +1321,8 @@ font: 9pt &quot;Segoe UI&quot;;</string>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
+         <string notr="true">alternate-background-color: rgb(85, 170, 255);
+background-color: rgb(179, 179, 179);</string>
         </property>
         <property name="placeholderText">
          <string>Введите почту</string>
@@ -1294,7 +1338,8 @@ font: 9pt &quot;Segoe UI&quot;;</string>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
+         <string notr="true">alternate-background-color: rgb(85, 170, 255);
+background-color: rgb(179, 179, 179);</string>
         </property>
         <property name="placeholderText">
          <string>Введите пароль</string>
@@ -1310,8 +1355,10 @@ font: 9pt &quot;Segoe UI&quot;;</string>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">font: 9pt &quot;Segoe UI&quot;;
-background-color: rgb(255, 255, 255);</string>
+         <string notr="true">background-color: rgb(255, 85, 0);
+color: rgb(75, 75, 75);
+font: 9pt &quot;Segoe UI&quot;;
+border-radius: 5px;</string>
         </property>
         <property name="text">
          <string>Изменить</string>
@@ -1350,7 +1397,7 @@ background-color: rgb(255, 255, 255);</string>
      <x>0</x>
      <y>0</y>
      <width>966</width>
-     <height>21</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>
