@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>966</width>
-    <height>594</height>
+    <width>940</width>
+    <height>600</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -26,8 +26,8 @@ background-color: rgb(75, 75, 75);</string>
    <widget class="QPushButton" name="btn_main_oper">
     <property name="geometry">
      <rect>
-      <x>130</x>
-      <y>0</y>
+      <x>60</x>
+      <y>20</y>
       <width>161</width>
       <height>61</height>
      </rect>
@@ -54,8 +54,8 @@ border-radius: 5px;</string>
    <widget class="QPushButton" name="btn_main_books">
     <property name="geometry">
      <rect>
-      <x>340</x>
-      <y>0</y>
+      <x>270</x>
+      <y>20</y>
       <width>161</width>
       <height>61</height>
      </rect>
@@ -79,8 +79,8 @@ border-radius: 5px;</string>
    <widget class="QPushButton" name="btn_main_clients">
     <property name="geometry">
      <rect>
-      <x>550</x>
-      <y>0</y>
+      <x>490</x>
+      <y>20</y>
       <width>161</width>
       <height>61</height>
      </rect>
@@ -104,8 +104,8 @@ border-radius: 5px;</string>
    <widget class="QPushButton" name="btn_main_empl">
     <property name="geometry">
      <rect>
-      <x>760</x>
-      <y>0</y>
+      <x>710</x>
+      <y>20</y>
       <width>161</width>
       <height>61</height>
      </rect>
@@ -135,26 +135,30 @@ border-radius: 5px;</string>
      </size>
     </property>
    </widget>
-   <widget class="QTabWidget" name="tbl_wdgt_add_user">
+   <widget class="QTabWidget" name="tbl_wdgt">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>60</y>
-      <width>991</width>
-      <height>481</height>
+      <y>90</y>
+      <width>941</width>
+      <height>461</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>MS Reference Sans Serif</family>
       <pointsize>10</pointsize>
+      <kerning>true</kerning>
      </font>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(75, 75, 75);</string>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="tab">
      <property name="styleSheet">
@@ -172,9 +176,9 @@ background-color: rgb(75, 75, 75);</string>
      <widget class="QTableWidget" name="operations_tbl_wid">
       <property name="geometry">
        <rect>
-        <x>0</x>
-        <y>60</y>
-        <width>751</width>
+        <x>30</x>
+        <y>50</y>
+        <width>581</width>
         <height>381</height>
        </rect>
       </property>
@@ -184,7 +188,9 @@ background-color: rgb(75, 75, 75);</string>
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(79, 238, 0);</string>
+       <string notr="true">background-color: rgb(79, 238, 0);
+background-color: rgb(143, 143, 143);
+border-radius: 5px;</string>
       </property>
       <column>
        <property name="text">
@@ -220,7 +226,7 @@ background-color: rgb(75, 75, 75);</string>
      <widget class="QPushButton" name="btn_record_oper">
       <property name="geometry">
        <rect>
-        <x>840</x>
+        <x>820</x>
         <y>10</y>
         <width>101</width>
         <height>31</height>
@@ -233,13 +239,13 @@ font: 9pt &quot;Segoe UI&quot;;
 border-radius: 5px;</string>
       </property>
       <property name="text">
-       <string>Добавить</string>
+       <string>Добавить ✔️</string>
       </property>
      </widget>
      <widget class="QLineEdit" name="ledit_title_book">
       <property name="geometry">
        <rect>
-        <x>10</x>
+        <x>30</x>
         <y>10</y>
         <width>141</width>
         <height>31</height>
@@ -247,7 +253,8 @@ border-radius: 5px;</string>
       </property>
       <property name="styleSheet">
        <string notr="true">alternate-background-color: rgb(85, 170, 255);
-background-color: rgb(179, 179, 179);</string>
+background-color: rgb(179, 179, 179);
+border-radius: 5px;</string>
       </property>
       <property name="placeholderText">
        <string>Введите название книги</string>
@@ -263,7 +270,8 @@ background-color: rgb(179, 179, 179);</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(179, 179, 179);</string>
+       <string notr="true">background-color: rgb(179, 179, 179);
+border-radius: 5px;</string>
       </property>
       <item>
        <property name="text">
@@ -286,7 +294,8 @@ background-color: rgb(179, 179, 179);</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(179, 179, 179);</string>
+       <string notr="true">background-color: rgb(179, 179, 179);
+border-radius: 5px;</string>
       </property>
       <item>
        <property name="text">
@@ -384,14 +393,15 @@ background-color: rgb(179, 179, 179);</string>
      <widget class="QLineEdit" name="lidit_name_client">
       <property name="geometry">
        <rect>
-        <x>190</x>
+        <x>220</x>
         <y>10</y>
         <width>141</width>
         <height>31</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(179, 179,179);</string>
+       <string notr="true">background-color: rgb(179, 179,179);
+border-radius: 5px;</string>
       </property>
       <property name="text">
        <string/>
@@ -413,12 +423,12 @@ background-color: rgb(179, 179, 179);</string>
        <rect>
         <x>-10</x>
         <y>0</y>
-        <width>981</width>
-        <height>471</height>
+        <width>1011</width>
+        <height>491</height>
        </rect>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tab_5">
        <attribute name="title">
@@ -434,7 +444,8 @@ background-color: rgb(179, 179, 179);</string>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(79, 238, 0);</string>
+         <string notr="true">background-color: rgb(143, 143, 143);
+border-radius: 5px;</string>
         </property>
         <column>
          <property name="text">
@@ -473,18 +484,98 @@ font: 9pt &quot;Segoe UI&quot;;
 border-radius: 5px;</string>
         </property>
         <property name="text">
-         <string>Добавить книгу</string>
+         <string>Добавить книгу ✔️</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_9">
+       <attribute name="title">
+        <string>Поиск</string>
+       </attribute>
+       <widget class="QComboBox" name="comboBox">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>10</y>
+          <width>121</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(179, 179,179);
+border-radius: 5px;</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>Автор</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Название</string>
+         </property>
+        </item>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>60</y>
+          <width>141</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(179, 179,179);
+border-radius: 5px;</string>
+        </property>
+        <property name="placeholderText">
+         <string>Введите</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton">
+        <property name="geometry">
+         <rect>
+          <x>270</x>
+          <y>30</y>
+          <width>131</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 85, 0);
+color: rgb(75, 75, 75);
+font: 12pt &quot;Segoe UI&quot;;
+border-radius: 5px;</string>
+        </property>
+        <property name="text">
+         <string>🔍 Поиск</string>
+        </property>
+       </widget>
+       <widget class="QListView" name="listView">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>110</y>
+          <width>391</width>
+          <height>261</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(79, 238, 0);
+background-color: rgb(143, 143, 143);
+border-radius: 5px;</string>
         </property>
        </widget>
       </widget>
       <widget class="QWidget" name="tab_6">
        <attribute name="title">
-        <string>Редакт или удаление</string>
+        <string>Редакт/удаление</string>
        </attribute>
        <widget class="QLineEdit" name="ledit_search_book">
         <property name="geometry">
          <rect>
-          <x>20</x>
+          <x>40</x>
           <y>40</y>
           <width>151</width>
           <height>31</height>
@@ -492,7 +583,8 @@ border-radius: 5px;</string>
         </property>
         <property name="styleSheet">
          <string notr="true">alternate-background-color: rgb(85, 170, 255);
-background-color: rgb(179, 179, 179);</string>
+background-color: rgb(179, 179, 179);
+border-radius: 5px;</string>
         </property>
         <property name="placeholderText">
          <string>Введите название</string>
@@ -501,7 +593,7 @@ background-color: rgb(179, 179, 179);</string>
        <widget class="QLineEdit" name="ledit_update_title">
         <property name="geometry">
          <rect>
-          <x>90</x>
+          <x>140</x>
           <y>170</y>
           <width>181</width>
           <height>31</height>
@@ -509,7 +601,8 @@ background-color: rgb(179, 179, 179);</string>
         </property>
         <property name="styleSheet">
          <string notr="true">alternate-background-color: rgb(85, 170, 255);
-background-color: rgb(179, 179, 179);</string>
+background-color: rgb(179, 179, 179);
+border-radius: 5px;</string>
         </property>
         <property name="placeholderText">
          <string>Введите название</string>
@@ -518,9 +611,9 @@ background-color: rgb(179, 179, 179);</string>
        <widget class="QLabel" name="lbl_search_title">
         <property name="geometry">
          <rect>
-          <x>20</x>
+          <x>40</x>
           <y>10</y>
-          <width>261</width>
+          <width>291</width>
           <height>21</height>
          </rect>
         </property>
@@ -537,7 +630,7 @@ background-color: rgb(179, 179, 179);</string>
        <widget class="QPushButton" name="btn_search_book">
         <property name="geometry">
          <rect>
-          <x>200</x>
+          <x>230</x>
           <y>40</y>
           <width>81</width>
           <height>31</height>
@@ -559,14 +652,14 @@ font: 9pt &quot;Segoe UI&quot;;
 border-radius: 5px;</string>
         </property>
         <property name="text">
-         <string>Поиск</string>
+         <string>🔍 Поиск</string>
         </property>
        </widget>
        <widget class="QLabel" name="lnl_inf">
         <property name="geometry">
          <rect>
-          <x>10</x>
-          <y>129</y>
+          <x>40</x>
+          <y>110</y>
           <width>651</width>
           <height>31</height>
          </rect>
@@ -584,7 +677,7 @@ border-radius: 5px;</string>
        <widget class="QLineEdit" name="ledit_update_id_book">
         <property name="geometry">
          <rect>
-          <x>90</x>
+          <x>140</x>
           <y>220</y>
           <width>181</width>
           <height>31</height>
@@ -592,7 +685,8 @@ border-radius: 5px;</string>
         </property>
         <property name="styleSheet">
          <string notr="true">alternate-background-color: rgb(85, 170, 255);
-background-color: rgb(179, 179, 179);</string>
+background-color: rgb(179, 179, 179);
+border-radius: 5px;</string>
         </property>
         <property name="text">
          <string/>
@@ -604,7 +698,7 @@ background-color: rgb(179, 179, 179);</string>
        <widget class="QLineEdit" name="ledit_update_genre">
         <property name="geometry">
          <rect>
-          <x>90</x>
+          <x>140</x>
           <y>270</y>
           <width>181</width>
           <height>31</height>
@@ -612,7 +706,8 @@ background-color: rgb(179, 179, 179);</string>
         </property>
         <property name="styleSheet">
          <string notr="true">alternate-background-color: rgb(85, 170, 255);
-background-color: rgb(179, 179, 179);</string>
+background-color: rgb(179, 179, 179);
+border-radius: 5px;</string>
         </property>
         <property name="text">
          <string/>
@@ -624,7 +719,7 @@ background-color: rgb(179, 179, 179);</string>
        <widget class="QLineEdit" name="ledit_update_author">
         <property name="geometry">
          <rect>
-          <x>90</x>
+          <x>140</x>
           <y>320</y>
           <width>181</width>
           <height>31</height>
@@ -632,7 +727,8 @@ background-color: rgb(179, 179, 179);</string>
         </property>
         <property name="styleSheet">
          <string notr="true">alternate-background-color: rgb(85, 170, 255);
-background-color: rgb(179, 179, 179);</string>
+background-color: rgb(179, 179, 179);
+border-radius: 5px;</string>
         </property>
         <property name="placeholderText">
          <string>Введите автора</string>
@@ -641,21 +737,22 @@ background-color: rgb(179, 179, 179);</string>
        <widget class="QTextEdit" name="txt_edit_update_desclabelrip">
         <property name="geometry">
          <rect>
-          <x>460</x>
-          <y>170</y>
-          <width>371</width>
+          <x>470</x>
+          <y>160</y>
+          <width>381</width>
           <height>191</height>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
+         <string notr="true">background-color: rgb(255, 255, 255);
+border-radius: 5px;</string>
         </property>
        </widget>
        <widget class="QLabel" name="lbl_update_title">
         <property name="geometry">
          <rect>
-          <x>10</x>
-          <y>180</y>
+          <x>50</x>
+          <y>170</y>
           <width>71</width>
           <height>21</height>
          </rect>
@@ -673,7 +770,7 @@ background-color: rgb(179, 179, 179);</string>
        <widget class="QLabel" name="lbl_update_id_book">
         <property name="geometry">
          <rect>
-          <x>10</x>
+          <x>50</x>
           <y>220</y>
           <width>71</width>
           <height>21</height>
@@ -692,7 +789,7 @@ background-color: rgb(179, 179, 179);</string>
        <widget class="QLabel" name="lbl_update_genre">
         <property name="geometry">
          <rect>
-          <x>10</x>
+          <x>50</x>
           <y>270</y>
           <width>71</width>
           <height>21</height>
@@ -711,7 +808,7 @@ background-color: rgb(179, 179, 179);</string>
        <widget class="QLabel" name="lbl_update_author">
         <property name="geometry">
          <rect>
-          <x>10</x>
+          <x>50</x>
           <y>320</y>
           <width>71</width>
           <height>21</height>
@@ -730,9 +827,9 @@ background-color: rgb(179, 179, 179);</string>
        <widget class="QPushButton" name="btn_update_book">
         <property name="geometry">
          <rect>
-          <x>30</x>
+          <x>60</x>
           <y>370</y>
-          <width>75</width>
+          <width>111</width>
           <height>23</height>
          </rect>
         </property>
@@ -752,15 +849,15 @@ font: 9pt &quot;Segoe UI&quot;;
 border-radius: 5px;</string>
         </property>
         <property name="text">
-         <string>Обновить</string>
+         <string>Обновить 🔄</string>
         </property>
        </widget>
        <widget class="QPushButton" name="btn_del_book">
         <property name="geometry">
          <rect>
-          <x>150</x>
+          <x>190</x>
           <y>370</y>
-          <width>111</width>
+          <width>121</width>
           <height>23</height>
          </rect>
         </property>
@@ -786,8 +883,8 @@ border-radius: 5px;</string>
        <widget class="QLabel" name="label">
         <property name="geometry">
          <rect>
-          <x>360</x>
-          <y>180</y>
+          <x>350</x>
+          <y>160</y>
           <width>91</width>
           <height>31</height>
          </rect>
@@ -815,10 +912,10 @@ border-radius: 5px;</string>
      <widget class="QTabWidget" name="tbl_wdgt_all_clients">
       <property name="geometry">
        <rect>
-        <x>0</x>
-        <y>10</y>
-        <width>991</width>
-        <height>471</height>
+        <x>-10</x>
+        <y>0</y>
+        <width>1001</width>
+        <height>491</height>
        </rect>
       </property>
       <property name="font">
@@ -830,7 +927,7 @@ border-radius: 5px;</string>
        <string notr="true">background-color: rgb(75, 75, 75);</string>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tab_7">
        <attribute name="title">
@@ -839,14 +936,15 @@ border-radius: 5px;</string>
        <widget class="QTableWidget" name="tbl_wdgt_all_books_4">
         <property name="geometry">
          <rect>
-          <x>0</x>
-          <y>0</y>
-          <width>381</width>
-          <height>421</height>
+          <x>30</x>
+          <y>10</y>
+          <width>301</width>
+          <height>371</height>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(79, 238, 0);</string>
+         <string notr="true">background-color: rgb(143, 143, 143);
+border-radius: 5px;</string>
         </property>
         <column>
          <property name="text">
@@ -880,7 +978,7 @@ font: 9pt &quot;Segoe UI&quot;;
 border-radius: 5px;</string>
         </property>
         <property name="text">
-         <string>Добавить читателя</string>
+         <string>Добавить читателя ✔️</string>
         </property>
        </widget>
       </widget>
@@ -891,7 +989,7 @@ border-radius: 5px;</string>
        <widget class="QLineEdit" name="ledit_search_client">
         <property name="geometry">
          <rect>
-          <x>20</x>
+          <x>40</x>
           <y>40</y>
           <width>151</width>
           <height>31</height>
@@ -899,7 +997,8 @@ border-radius: 5px;</string>
         </property>
         <property name="styleSheet">
          <string notr="true">alternate-background-color: rgb(85, 170, 255);
-background-color: rgb(179, 179, 179);</string>
+background-color: rgb(179, 179, 179);
+border-radius: 5px;</string>
         </property>
         <property name="placeholderText">
          <string>Введите название</string>
@@ -908,15 +1007,16 @@ background-color: rgb(179, 179, 179);</string>
        <widget class="QLineEdit" name="ledit_update_name_c">
         <property name="geometry">
          <rect>
-          <x>90</x>
-          <y>170</y>
+          <x>150</x>
+          <y>150</y>
           <width>181</width>
           <height>31</height>
          </rect>
         </property>
         <property name="styleSheet">
          <string notr="true">alternate-background-color: rgb(85, 170, 255);
-background-color: rgb(179, 179, 179);</string>
+background-color: rgb(179, 179, 179);
+border-radius: 5px;</string>
         </property>
         <property name="placeholderText">
          <string>Введите имя</string>
@@ -925,7 +1025,7 @@ background-color: rgb(179, 179, 179);</string>
        <widget class="QLabel" name="lbl_search_client_2">
         <property name="geometry">
          <rect>
-          <x>10</x>
+          <x>40</x>
           <y>10</y>
           <width>371</width>
           <height>21</height>
@@ -941,8 +1041,8 @@ background-color: rgb(179, 179, 179);</string>
        <widget class="QPushButton" name="btn_search_client">
         <property name="geometry">
          <rect>
-          <x>224</x>
-          <y>42</y>
+          <x>270</x>
+          <y>40</y>
           <width>81</width>
           <height>31</height>
          </rect>
@@ -954,16 +1054,16 @@ font: 9pt &quot;Segoe UI&quot;;
 border-radius: 5px;</string>
         </property>
         <property name="text">
-         <string>Поиск</string>
+         <string>🔍 Поиск</string>
         </property>
        </widget>
        <widget class="QLabel" name="lnl_inf_2">
         <property name="geometry">
          <rect>
-          <x>10</x>
-          <y>140</y>
-          <width>611</width>
-          <height>20</height>
+          <x>40</x>
+          <y>100</y>
+          <width>721</width>
+          <height>31</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -976,15 +1076,16 @@ border-radius: 5px;</string>
        <widget class="QLineEdit" name="ledit_update_num_c">
         <property name="geometry">
          <rect>
-          <x>90</x>
-          <y>220</y>
+          <x>150</x>
+          <y>200</y>
           <width>181</width>
           <height>31</height>
          </rect>
         </property>
         <property name="styleSheet">
          <string notr="true">alternate-background-color: rgb(85, 170, 255);
-background-color: rgb(179, 179, 179);</string>
+background-color: rgb(179, 179, 179);
+border-radius: 5px;</string>
         </property>
         <property name="placeholderText">
          <string>Введите номер</string>
@@ -993,15 +1094,16 @@ background-color: rgb(179, 179, 179);</string>
        <widget class="QLineEdit" name="ledit_update_mail_c">
         <property name="geometry">
          <rect>
-          <x>90</x>
-          <y>270</y>
+          <x>150</x>
+          <y>250</y>
           <width>181</width>
           <height>31</height>
          </rect>
         </property>
         <property name="styleSheet">
          <string notr="true">alternate-background-color: rgb(85, 170, 255);
-background-color: rgb(179, 179, 179);</string>
+background-color: rgb(179, 179, 179);
+border-radius: 5px;</string>
         </property>
         <property name="placeholderText">
          <string>Введите почту</string>
@@ -1010,8 +1112,8 @@ background-color: rgb(179, 179, 179);</string>
        <widget class="QLabel" name="lbl_update_name_c">
         <property name="geometry">
          <rect>
-          <x>10</x>
-          <y>180</y>
+          <x>50</x>
+          <y>150</y>
           <width>71</width>
           <height>21</height>
          </rect>
@@ -1026,8 +1128,8 @@ background-color: rgb(179, 179, 179);</string>
        <widget class="QLabel" name="lbl_update_num_c">
         <property name="geometry">
          <rect>
-          <x>10</x>
-          <y>220</y>
+          <x>50</x>
+          <y>200</y>
           <width>71</width>
           <height>21</height>
          </rect>
@@ -1043,8 +1145,8 @@ font: 8pt &quot;Segoe UI&quot;;</string>
        <widget class="QLabel" name="lbl_update_mail_c">
         <property name="geometry">
          <rect>
-          <x>10</x>
-          <y>270</y>
+          <x>50</x>
+          <y>250</y>
           <width>71</width>
           <height>21</height>
          </rect>
@@ -1059,9 +1161,9 @@ font: 8pt &quot;Segoe UI&quot;;</string>
        <widget class="QPushButton" name="btn_update_client">
         <property name="geometry">
          <rect>
-          <x>20</x>
-          <y>320</y>
-          <width>101</width>
+          <x>50</x>
+          <y>310</y>
+          <width>111</width>
           <height>23</height>
          </rect>
         </property>
@@ -1072,15 +1174,15 @@ font: 10pt &quot;Segoe UI&quot;;
 border-radius: 5px;</string>
         </property>
         <property name="text">
-         <string>Обновить</string>
+         <string>Обновить 🔄</string>
         </property>
        </widget>
        <widget class="QPushButton" name="btn_del_client">
         <property name="geometry">
          <rect>
-          <x>160</x>
-          <y>320</y>
-          <width>101</width>
+          <x>230</x>
+          <y>310</y>
+          <width>121</width>
           <height>23</height>
          </rect>
         </property>
@@ -1107,10 +1209,10 @@ border-radius: 5px;</string>
      <widget class="QTabWidget" name="tb_wdgt_empl">
       <property name="geometry">
        <rect>
-        <x>-10</x>
+        <x>0</x>
         <y>0</y>
-        <width>991</width>
-        <height>451</height>
+        <width>951</width>
+        <height>481</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -1126,15 +1228,16 @@ border-radius: 5px;</string>
        <widget class="QLineEdit" name="ledit__add_name_e">
         <property name="geometry">
          <rect>
-          <x>90</x>
-          <y>40</y>
+          <x>130</x>
+          <y>10</y>
           <width>131</width>
           <height>31</height>
          </rect>
         </property>
         <property name="styleSheet">
          <string notr="true">alternate-background-color: rgb(85, 170, 255);
-background-color: rgb(179, 179, 179);</string>
+background-color: rgb(179, 179, 179);
+border-radius: 5px;</string>
         </property>
         <property name="placeholderText">
          <string>Введите имя</string>
@@ -1143,15 +1246,16 @@ background-color: rgb(179, 179, 179);</string>
        <widget class="QLineEdit" name="ledit_add_mail_e">
         <property name="geometry">
          <rect>
-          <x>90</x>
-          <y>90</y>
+          <x>130</x>
+          <y>60</y>
           <width>131</width>
           <height>31</height>
          </rect>
         </property>
         <property name="styleSheet">
          <string notr="true">alternate-background-color: rgb(85, 170, 255);
-background-color: rgb(179, 179, 179);</string>
+background-color: rgb(179, 179, 179);
+border-radius: 5px;</string>
         </property>
         <property name="placeholderText">
          <string>Введите почту</string>
@@ -1160,15 +1264,16 @@ background-color: rgb(179, 179, 179);</string>
        <widget class="QLineEdit" name="ledit_add_pass_e">
         <property name="geometry">
          <rect>
-          <x>90</x>
-          <y>140</y>
+          <x>130</x>
+          <y>110</y>
           <width>131</width>
           <height>31</height>
          </rect>
         </property>
         <property name="styleSheet">
          <string notr="true">alternate-background-color: rgb(85, 170, 255);
-background-color: rgb(179, 179, 179);</string>
+background-color: rgb(179, 179, 179);
+border-radius: 5px;</string>
         </property>
         <property name="placeholderText">
          <string>Введите пароль</string>
@@ -1177,8 +1282,8 @@ background-color: rgb(179, 179, 179);</string>
        <widget class="QLabel" name="lbl_add_name_e">
         <property name="geometry">
          <rect>
-          <x>10</x>
-          <y>40</y>
+          <x>30</x>
+          <y>20</y>
           <width>71</width>
           <height>21</height>
          </rect>
@@ -1193,8 +1298,8 @@ background-color: rgb(179, 179, 179);</string>
        <widget class="QLabel" name="lbl_add_mail_e">
         <property name="geometry">
          <rect>
-          <x>10</x>
-          <y>90</y>
+          <x>30</x>
+          <y>70</y>
           <width>71</width>
           <height>21</height>
          </rect>
@@ -1209,8 +1314,8 @@ background-color: rgb(179, 179, 179);</string>
        <widget class="QLabel" name="lbl_add_pass_e">
         <property name="geometry">
          <rect>
-          <x>10</x>
-          <y>140</y>
+          <x>30</x>
+          <y>110</y>
           <width>71</width>
           <height>21</height>
          </rect>
@@ -1225,9 +1330,9 @@ background-color: rgb(179, 179, 179);</string>
        <widget class="QPushButton" name="btn_add_e">
         <property name="geometry">
          <rect>
-          <x>60</x>
-          <y>200</y>
-          <width>91</width>
+          <x>80</x>
+          <y>170</y>
+          <width>111</width>
           <height>31</height>
          </rect>
         </property>
@@ -1238,7 +1343,7 @@ font: 9pt &quot;Segoe UI&quot;;
 border-radius: 5px;</string>
         </property>
         <property name="text">
-         <string>Добавить</string>
+         <string>Добавить ✔️</string>
         </property>
        </widget>
       </widget>
@@ -1249,7 +1354,7 @@ border-radius: 5px;</string>
        <widget class="QLabel" name="lbl_update_name_e">
         <property name="geometry">
          <rect>
-          <x>20</x>
+          <x>30</x>
           <y>20</y>
           <width>81</width>
           <height>21</height>
@@ -1265,7 +1370,7 @@ border-radius: 5px;</string>
        <widget class="QLabel" name="lbl_update_mail_e">
         <property name="geometry">
          <rect>
-          <x>20</x>
+          <x>30</x>
           <y>70</y>
           <width>81</width>
           <height>21</height>
@@ -1281,7 +1386,7 @@ border-radius: 5px;</string>
        <widget class="QLabel" name="lbl_update_pass_e_2">
         <property name="geometry">
          <rect>
-          <x>20</x>
+          <x>30</x>
           <y>110</y>
           <width>81</width>
           <height>21</height>
@@ -1297,7 +1402,7 @@ border-radius: 5px;</string>
        <widget class="QLineEdit" name="ledit__update_name_e_2">
         <property name="geometry">
          <rect>
-          <x>80</x>
+          <x>140</x>
           <y>20</y>
           <width>131</width>
           <height>31</height>
@@ -1305,7 +1410,8 @@ border-radius: 5px;</string>
         </property>
         <property name="styleSheet">
          <string notr="true">alternate-background-color: rgb(85, 170, 255);
-background-color: rgb(179, 179, 179);</string>
+background-color: rgb(179, 179, 179);
+border-radius: 5px;</string>
         </property>
         <property name="placeholderText">
          <string>Введите имя</string>
@@ -1314,7 +1420,7 @@ background-color: rgb(179, 179, 179);</string>
        <widget class="QLineEdit" name="ledit_update_mail_e">
         <property name="geometry">
          <rect>
-          <x>80</x>
+          <x>140</x>
           <y>70</y>
           <width>131</width>
           <height>31</height>
@@ -1322,7 +1428,8 @@ background-color: rgb(179, 179, 179);</string>
         </property>
         <property name="styleSheet">
          <string notr="true">alternate-background-color: rgb(85, 170, 255);
-background-color: rgb(179, 179, 179);</string>
+background-color: rgb(179, 179, 179);
+border-radius: 5px;</string>
         </property>
         <property name="placeholderText">
          <string>Введите почту</string>
@@ -1331,7 +1438,7 @@ background-color: rgb(179, 179, 179);</string>
        <widget class="QLineEdit" name="ledit_update_pass">
         <property name="geometry">
          <rect>
-          <x>80</x>
+          <x>140</x>
           <y>110</y>
           <width>131</width>
           <height>31</height>
@@ -1339,7 +1446,8 @@ background-color: rgb(179, 179, 179);</string>
         </property>
         <property name="styleSheet">
          <string notr="true">alternate-background-color: rgb(85, 170, 255);
-background-color: rgb(179, 179, 179);</string>
+background-color: rgb(179, 179, 179);
+border-radius: 5px;</string>
         </property>
         <property name="placeholderText">
          <string>Введите пароль</string>
@@ -1348,10 +1456,10 @@ background-color: rgb(179, 179, 179);</string>
        <widget class="QPushButton" name="btn_update_e">
         <property name="geometry">
          <rect>
-          <x>74</x>
-          <y>180</y>
-          <width>111</width>
-          <height>41</height>
+          <x>80</x>
+          <y>170</y>
+          <width>121</width>
+          <height>31</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -1361,34 +1469,12 @@ font: 9pt &quot;Segoe UI&quot;;
 border-radius: 5px;</string>
         </property>
         <property name="text">
-         <string>Изменить</string>
+         <string>Изменить 🔄</string>
         </property>
        </widget>
       </widget>
      </widget>
     </widget>
-   </widget>
-   <widget class="QLabel" name="lbl_logo">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>0</y>
-      <width>101</width>
-      <height>61</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Segoe UI Emoji</family>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);
-background-color: rgb(255, 255, 255);</string>
-    </property>
-    <property name="text">
-     <string>  тут будет лого</string>
-    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -1396,15 +1482,13 @@ background-color: rgb(255, 255, 255);</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>966</width>
+     <width>940</width>
      <height>26</height>
     </rect>
    </property>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources>
-  <include location="logo.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

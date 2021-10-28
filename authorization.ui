@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>588</width>
-    <height>317</height>
+    <width>712</width>
+    <height>413</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,7 +20,7 @@
    <widget class="QPushButton" name="btn_enter">
     <property name="geometry">
      <rect>
-      <x>210</x>
+      <x>240</x>
       <y>170</y>
       <width>171</width>
       <height>31</height>
@@ -36,38 +36,75 @@ border-radius: 5px;</string>
      <string>Войти</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="ledit_name_e_enter">
+   <widget class="QLineEdit" name="ledit_login_e_enter">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>40</y>
+      <x>200</x>
+      <y>60</y>
       <width>261</width>
       <height>41</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">alternate-background-color: rgb(85, 170, 255);
-background-color: rgb(179, 179, 179);</string>
+background-color: rgb(179, 179, 179);
+border-radius: 5px;</string>
     </property>
     <property name="placeholderText">
-     <string>Введите имя пользователя</string>
+     <string>Введите логин</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="ledit_pass_e_enter">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>100</y>
+      <x>200</x>
+      <y>110</y>
       <width>261</width>
       <height>41</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">alternate-background-color: rgb(85, 170, 255);
-background-color: rgb(179, 179, 179);</string>
+background-color: rgb(179, 179, 179);
+border-radius: 5px;</string>
     </property>
     <property name="placeholderText">
      <string>Введите пароль</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>230</y>
+      <width>221</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0, 204, 204);</string>
+    </property>
+    <property name="text">
+     <string>Нет аккаунта? -Зарегистрируйся</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_reg">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>310</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 85, 0);
+color: rgb(75, 75, 75);
+font: 9pt &quot;Segoe UI&quot;;
+border-radius: 5px;</string>
+    </property>
+    <property name="text">
+     <string>Регистрация</string>
     </property>
    </widget>
   </widget>
@@ -76,7 +113,7 @@ background-color: rgb(179, 179, 179);</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>588</width>
+     <width>712</width>
      <height>26</height>
     </rect>
    </property>
