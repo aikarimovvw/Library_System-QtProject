@@ -434,45 +434,11 @@ border-radius: 5px;</string>
        <attribute name="title">
         <string>Книги</string>
        </attribute>
-       <widget class="QTableWidget" name="tbl_wdgt_all_books_2">
-        <property name="geometry">
-         <rect>
-          <x>0</x>
-          <y>0</y>
-          <width>401</width>
-          <height>411</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(143, 143, 143);
-border-radius: 5px;</string>
-        </property>
-        <column>
-         <property name="text">
-          <string>id книги</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>название</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>описание</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>автор</string>
-         </property>
-        </column>
-       </widget>
        <widget class="QPushButton" name="btn_add_book">
         <property name="geometry">
          <rect>
-          <x>670</x>
-          <y>30</y>
+          <x>760</x>
+          <y>10</y>
           <width>141</width>
           <height>41</height>
          </rect>
@@ -485,6 +451,39 @@ border-radius: 5px;</string>
         </property>
         <property name="text">
          <string>Добавить книгу ✔️</string>
+        </property>
+       </widget>
+       <widget class="QTableView" name="tbl_view_books">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>681</width>
+          <height>431</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(143, 143, 143);
+border-radius: 5px;</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btn_update_books">
+        <property name="geometry">
+         <rect>
+          <x>690</x>
+          <y>10</y>
+          <width>41</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(70, 212, 212);
+color: rgb(75, 75, 75);
+font: 14pt &quot;Segoe UI&quot;;
+border-radius: 5px;</string>
+        </property>
+        <property name="text">
+         <string>🔁</string>
         </property>
        </widget>
       </widget>
@@ -1483,7 +1482,7 @@ border-radius: 5px;</string>
      <x>0</x>
      <y>0</y>
      <width>940</width>
-     <height>26</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>
