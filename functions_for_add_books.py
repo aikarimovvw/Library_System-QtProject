@@ -10,3 +10,10 @@ def check_year(year):
         return 'ок'
     else:
         return 'Введите корректную дату публикации произведения'
+
+
+def check_genre(genre):
+    if len(genre) > 0:
+        return 'ок'
+    else:
+        return 'Введите корректный жанр'

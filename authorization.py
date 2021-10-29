@@ -45,6 +45,7 @@ def except_hook(cls, exception, traceback):
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
+    app.setStyle('Fusion')
     ex = AddClient()
     sys.excepthook = except_hook
     ex.show()

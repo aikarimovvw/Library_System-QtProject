@@ -49,21 +49,27 @@ class AddBook(QMainWindow):
     def save_book(self):
         title = self.ledit_title.text()
         year = self.ledit_year.text()
+
         author = self.ledit_author.text()
         if self.ledit_author.text() == '':
             author = self.author_inp_dialog
 
         genre = self.ledit_genre.text()
         if self.ledit_genre.text() == '':
-            author = self.genres_inp_dialog
+            genre = self.genres_inp_dialog
+
         description = self.txt_edit_description.toPlainText()
         path_default = 'default_cover.jpg'
         title_check = functions_for_add_books.check_title(title)
         year_check = functions_for_add_books.check_year(year)
         author_check = function_for_reg.check_name(author)
+        genre_check = functions_for_add_books.check_genre(genre)
 
         if title_check != 'ок':
             self.statusBar().showMessage(title_check)
+            return None
+        if genre_check != 'ок':
+            self.statusBar().showMessage(genre_check)
             return None
         if year_check != 'ок':
             self.statusBar().showMessage(year_check)
@@ -71,9 +77,12 @@ class AddBook(QMainWindow):
         if author_check != 'ок':
             self.statusBar().showMessage(author_check)
             return None
+        if self.path == '':
+            self.path = path_default
 
         con = sqlite3.connect("db_lib.sqlite")
         cur = con.cursor()
+
         res_check_name = cur.execute("""SELECT * FROM Authors
         WHERE author =?""", (author,)).fetchone()
         res_check_genre = cur.execute("""SELECT * FROM Genres
@@ -83,20 +92,18 @@ class AddBook(QMainWindow):
         if res_check_genre is None:
             cur.execute("""INSERT INTO Genres(genre) VALUES(?)""", (genre,)).fetchall()
 
-        author_add_id = cur.execute("""SELECT id from Authors
+        author_add_name = cur.execute("""SELECT author from Authors
         WHERE author=? """, (author,)).fetchone()
 
-        if self.path == '':
-            self.path = path_default
-
-        genre_add_id = cur.execute("""SELECT id from Genres
+        genre_add_name = cur.execute("""SELECT genre from Genres
                 WHERE genre=? """, (genre,)).fetchone()
-        cur.execute("""INSERT INTO Books(author_id, book, genre_id, description, year, path_image) 
-        VALUES(?, ?, ?, ?, ?, ?)""", (author_add_id[0], title, genre_add_id[0], description, year, self.path))
+        cur.execute("""INSERT INTO Books(author_name, book, genre_name, description, year, path_image) 
+        VALUES(?, ?, ?, ?, ?, ?)""", (author_add_name[0], title, genre_add_name[0], description, year, self.path))
         con.commit()
         con.close()
         self.statusBar().setStyleSheet("color : green")
         self.statusBar().showMessage('Книга успешно добавлена!')
+        self.close()
 
 
 def except_hook(cls, exception, traceback):
@@ -105,6 +112,7 @@ def except_hook(cls, exception, traceback):
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
+    app.setStyle('Fusion')
     ex = AddBook()
     sys.excepthook = except_hook
     ex.show()

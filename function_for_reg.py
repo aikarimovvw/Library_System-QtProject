@@ -51,7 +51,7 @@ def check_number(number):
 def check_name(name):
     if any(map(str.isdigit, name)):
         return 'В имени присутствуют цифры'
-    elif not ''.join(list(filter(lambda x: x != '.' and x != ' ', name))).isalpha():
+    elif not ''.join(list(filter(lambda x: x != '.' and x != ' ' and x != '-', name))).isalpha():
         return 'недопустимый формат имени'
     elif len(name) == 0:
         return 'введите имя'
