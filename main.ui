@@ -428,7 +428,7 @@ border-radius: 5px;</string>
        </rect>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="tab_5">
        <attribute name="title">
@@ -491,7 +491,7 @@ border-radius: 5px;</string>
        <attribute name="title">
         <string>Поиск</string>
        </attribute>
-       <widget class="QComboBox" name="comboBox">
+       <widget class="QComboBox" name="cmb_value_search">
         <property name="geometry">
          <rect>
           <x>40</x>
@@ -515,7 +515,7 @@ border-radius: 5px;</string>
          </property>
         </item>
        </widget>
-       <widget class="QLineEdit" name="lineEdit">
+       <widget class="QLineEdit" name="ledit_value_search">
         <property name="geometry">
          <rect>
           <x>40</x>
@@ -532,7 +532,7 @@ border-radius: 5px;</string>
          <string>Введите</string>
         </property>
        </widget>
-       <widget class="QPushButton" name="pushButton">
+       <widget class="QPushButton" name="btn_search_book">
         <property name="geometry">
          <rect>
           <x>270</x>
@@ -551,19 +551,24 @@ border-radius: 5px;</string>
          <string>🔍 Поиск</string>
         </property>
        </widget>
-       <widget class="QListView" name="listView">
+       <widget class="QFrame" name="frame_btn_books">
         <property name="geometry">
          <rect>
           <x>40</x>
           <y>110</y>
-          <width>391</width>
-          <height>261</height>
+          <width>421</width>
+          <height>271</height>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(79, 238, 0);
-background-color: rgb(143, 143, 143);
+         <string notr="true">background-color: rgb(179, 179,179);
 border-radius: 5px;</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
         </property>
        </widget>
       </widget>
@@ -626,7 +631,7 @@ border-radius: 5px;</string>
          <string>Поиск книги по названию</string>
         </property>
        </widget>
-       <widget class="QPushButton" name="btn_search_book">
+       <widget class="QPushButton" name="btn_search_book_update">
         <property name="geometry">
          <rect>
           <x>230</x>
