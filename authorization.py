@@ -23,20 +23,20 @@ class AddClient(QMainWindow):
         con = sqlite3.connect('db_lib.sqlite')
         cur = con.cursor()
         login = self.ledit_login_e_enter.text()
-        result = cur.execute("""SELECT * FROM Employee
-                 WHERE login = ?""", (login,)).fetchone()
-        if result is None:
+        res = cur.execute("""SELECT * FROM Employee WHERE login = ?""", (login,)).fetchone()
+        if res is None:
             self.statusBar().showMessage('Неверный логин')
         else:
             password = self.ledit_pass_e_enter.text()
-            if password != str(result[1]):
+            password_db = str(res[1])
+            if password != password_db:
                 self.statusBar().showMessage('Неправильный пароль')
             else:
                 self.statusBar().setStyleSheet("color : green")
                 self.statusBar().showMessage('Успешно')
                 self.transition_home_wind.show()
-        con.close()
-        self.close()
+                con.close()
+                self.close()
 
 
 def except_hook(cls, exception, traceback):
