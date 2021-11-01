@@ -3,7 +3,7 @@ import sqlite3
 
 from PyQt5.QtWidgets import QApplication, QMainWindow, QMessageBox
 from PyQt5 import uic
-import functions_for_add_books
+import functions_for_add
 
 
 class RegEmployee(QMainWindow):
@@ -18,10 +18,10 @@ class RegEmployee(QMainWindow):
         password = self.ledit_pass.text()
         login = self.ledit_login.text()
 
-        login_check = functions_for_add_books.check_len(login)
-        pass_check = functions_for_add_books.check_len(password)
-        number_check = functions_for_add_books.check_len(number)
-        name_check = functions_for_add_books.check_len(name_employee)
+        login_check = functions_for_add.check_len(login)
+        pass_check = functions_for_add.check_len(password)
+        number_check = functions_for_add.check_len(number)
+        name_check = functions_for_add.check_len(name_employee)
 
         if not any([login_check, pass_check, number_check, name_check]):
             self.statusBar().showMessage('Пустая строка, введите заново')

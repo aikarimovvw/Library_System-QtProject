@@ -31,7 +31,6 @@ class ShowInf(QWidget):
         self.label_year.setText(str(res_inf[0][6]))
         self.txt_edit_description.setEnabled(False)
         self.txt_edit_description.setText(res_inf[0][5])
-        #self.lst_wdgt_description.addItem(res_inf[0][5])
         con.commit()
         con.close()
 

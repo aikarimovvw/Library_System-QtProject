@@ -3,7 +3,7 @@ import sqlite3
 from PyQt5.QtWidgets import QApplication, QMainWindow, QInputDialog
 from PyQt5.QtWidgets import QFileDialog
 from PyQt5 import uic
-import functions_for_add_books
+import functions_for_add
 
 
 class AddBook(QMainWindow):
@@ -49,10 +49,10 @@ class AddBook(QMainWindow):
             self.genre = self.ledit_genre.text()
 
         description = self.txt_edit_description.toPlainText()
-        title_check = functions_for_add_books.check_len(title)
-        year_check = functions_for_add_books.check_year(year)
-        author_check = functions_for_add_books.check_len(self.author)
-        genre_check = functions_for_add_books.check_len(self.genre)
+        title_check = functions_for_add.check_len(title)
+        year_check = functions_for_add.check_year(year)
+        author_check = functions_for_add.check_len(self.author)
+        genre_check = functions_for_add.check_len(self.genre)
 
         if all([title_check, genre_check, author_check]):
             if not year_check:
@@ -75,8 +75,8 @@ class AddBook(QMainWindow):
 
         cur.execute("""INSERT INTO Books(author_name, book, genre_name, description, year, path_image) 
                 VALUES(?, ?, ?, ?, ?, ?)""",
-                    (cur.execute(functions_for_add_books.paste('author'), (self.author,)).fetchone()[0], title,
-                     cur.execute(functions_for_add_books.paste('genre'), (self.genre,)).fetchone()[0], description,
+                    (cur.execute(functions_for_add.paste('author'), (self.author,)).fetchone()[0], title,
+                     cur.execute(functions_for_add.paste('genre'), (self.genre,)).fetchone()[0], description,
                      year,
                      self.path))
         con.commit()

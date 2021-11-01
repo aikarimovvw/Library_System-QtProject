@@ -1,11 +1,10 @@
 from datetime import date
 from datetime import datetime
-
-input_len = 0
+from CONST_VALUES import *
 
 
 def check_len(name):
-    if len(name) != input_len:
+    if len(name) != INPUT_LEN:
         return True
     else:
         return False

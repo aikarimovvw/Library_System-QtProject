@@ -3,7 +3,7 @@ import sqlite3
 from PyQt5.QtWidgets import QApplication, QMainWindow, QInputDialog
 from PyQt5.QtWidgets import QFileDialog
 from PyQt5 import uic
-import functions_for_add_books
+import functions_for_add
 
 
 class AddClient(QMainWindow):
@@ -19,11 +19,11 @@ class AddClient(QMainWindow):
         address_client = self.ledit_add_address.text()
         b_date = self.clndr_wdgt_add_date.selectedDate().toString("yyyy-MM-dd")
 
-        name_check = functions_for_add_books.check_len(name)
-        number_check = functions_for_add_books.check_len(phone_num_client)
-        mail_check = functions_for_add_books.check_len(mail_client)
-        address_check = functions_for_add_books.check_len(address_client)
-        year_check = functions_for_add_books.check_date(b_date)
+        name_check = functions_for_add.check_len(name)
+        number_check = functions_for_add.check_len(phone_num_client)
+        mail_check = functions_for_add.check_len(mail_client)
+        address_check = functions_for_add.check_len(address_client)
+        year_check = functions_for_add.check_date(b_date)
 
         if all([name_check, number_check, mail_check, address_check]):
             if year_check is False:
