@@ -1,0 +1,1 @@
+INPUT_LEN = 0
