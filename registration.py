@@ -3,7 +3,7 @@ import sqlite3
 
 from PyQt5.QtWidgets import QApplication, QMainWindow, QMessageBox
 from PyQt5 import uic
-import function_for_reg
+import functions_for_add_books
 
 
 class RegEmployee(QMainWindow):
@@ -18,43 +18,26 @@ class RegEmployee(QMainWindow):
         password = self.ledit_pass.text()
         login = self.ledit_login.text()
 
-        login_check = function_for_reg.check_login(login)
-        pass_check = function_for_reg.check_pass(password)
-        number_check = function_for_reg.check_number(number)
-        name_check = function_for_reg.check_name(name_employee)
+        login_check = functions_for_add_books.check_len(login)
+        pass_check = functions_for_add_books.check_len(password)
+        number_check = functions_for_add_books.check_len(number)
+        name_check = functions_for_add_books.check_len(name_employee)
 
-        if login_check != 'ок':
-            self.statusBar().showMessage(login_check)
-            return None
-        if pass_check != 'ок':
-            self.statusBar().showMessage(pass_check)
-            return None
-        if number_check != 'ок':
-            self.statusBar().showMessage(number_check)
-            return None
-        if name_check != 'ок':
-            self.statusBar().showMessage(name_check)
+        if not any([login_check, pass_check, number_check, name_check]):
+            self.statusBar().showMessage('Пустая строка, введите заново')
             return None
 
         con = sqlite3.connect('db_lib.sqlite')
         cur = con.cursor()
-        result = cur.execute("""SELECT * FROM Employee
-                                         WHERE number=?""",
-                             (number,)).fetchone()
-        result_check_login = cur.execute("""SELECT * FROM Employee
-                                         WHERE login = ?""",
-                                         (login,)).fetchone()
+        result_check_login = cur.execute("""SELECT * FROM Employee WHERE login = ?""", (login,)).fetchone()
         if result_check_login is None:
-            if result is None:
-                cur.execute("""INSERT INTO Employee(login, password, number, name)  
+            cur.execute("""INSERT INTO Employee(login, password, number, name)  
                                 VALUES(?, ?, ?, ?)""", (login, password, number, name_employee)).fetchall()
-                self.statusBar().setStyleSheet("color : green")
-                self.statusBar().showMessage('Данные занесены, можете продолжить вход')
-                con.commit()
-                con.close()
-                self.close()
-            else:
-                self.statusBar().showMessage('Такой пользователь уже существует')
+            self.statusBar().setStyleSheet("color : green")
+            self.statusBar().showMessage('Данные занесены, можете продолжить вход')
+            con.commit()
+            con.close()
+            self.close()
 
         else:
             self.statusBar().showMessage('Такой пользователь уже существует')
