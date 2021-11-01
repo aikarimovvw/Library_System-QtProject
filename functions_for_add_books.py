@@ -1,19 +1,34 @@
-def check_title(name):
-    if len(name) > 0:
-        return 'ок'
+from datetime import date
+from datetime import datetime
+
+input_len = 0
+
+
+def check_len(name):
+    if len(name) != input_len:
+        return True
     else:
-        return 'Введите название, если его нет, то первую строку произведения'
+        return False
 
 
 def check_year(year):
-    if (0 < int(year) < 2022) and year.isdigit():
-        return 'ок'
-    else:
-        return 'Введите корректную дату публикации произведения'
+    current_date = date.today()
+    if year.isdigit() and int(year) <= current_date.year:
+        return True
+    return False
 
 
-def check_genre(genre):
-    if len(genre) > 0:
-        return 'ок'
+def check_date(b_date):
+    b_date = datetime.strptime(b_date, "%Y-%m-%d")
+    difference = datetime.today() - b_date
+    if difference.days > 0:
+        return True
     else:
-        return 'Введите корректный жанр'
+        return False
+
+
+def paste(item):
+    if item == 'author':
+        return """SELECT author from Authors WHERE author=? """
+    else:
+        return """SELECT genre from Genres WHERE genre=? """
