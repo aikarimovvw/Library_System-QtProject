@@ -22,6 +22,7 @@ class HomeScreen(QMainWindow):
         self.add_book_win = AddBook()
         self.show_debtors = ShowDebtors()
         uic.loadUi('home.ui', self)
+        self.setWindowTitle('Главное окно')
         self.tbl_wdgt.tabBar().setVisible(False)
 
         # Страница 1: Операция

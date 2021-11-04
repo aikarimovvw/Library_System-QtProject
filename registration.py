@@ -11,6 +11,7 @@ class RegEmployee(QMainWindow):
     def __init__(self):
         super().__init__()
         uic.loadUi('reg.ui', self)
+        self.setWindowTitle('Регистрация')
         self.btn_save_new_empl.clicked.connect(self.sign_new_employee)
 
     def sign_new_employee(self):

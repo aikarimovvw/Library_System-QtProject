@@ -11,6 +11,7 @@ class AddClient(QMainWindow):
     def __init__(self):
         super().__init__()
         uic.loadUi('add_client.ui', self)
+        self.setWindowTitle('Добавление читателя')
         self.btn_add_client.clicked.connect(self.save_client)
 
     def save_client(self):

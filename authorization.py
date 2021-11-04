@@ -12,6 +12,7 @@ class AddClient(QMainWindow):
     def __init__(self):
         super().__init__()
         uic.loadUi('authorization.ui', self)
+        self.setWindowTitle('Авторизация')
         self.btn_reg.clicked.connect(self.reg_empl)
         self.reg_empl_wind = RegEmployee()
         self.transition_home_wind = HomeScreen()

@@ -13,6 +13,7 @@ class AddBook(QMainWindow):
     def __init__(self):
         super().__init__()
         uic.loadUi('add_book.ui', self)
+        self.setWindowTitle('Добавление книги')
         self.btn_save.clicked.connect(self.save_book)
         self.btn_load_img.clicked.connect(self.load_image)
         self.btn_look_authors.clicked.connect(lambda btn, text='author': self.viewing_content(text))
