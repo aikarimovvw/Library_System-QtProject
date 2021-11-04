@@ -4,8 +4,11 @@ from PyQt5.QtWidgets import QApplication, QMainWindow, QInputDialog
 from PyQt5.QtWidgets import QFileDialog
 from PyQt5 import uic
 import functions_for_add
+import library_db
+from CONST_VALUES import *
 
 
+# окно для добавления книги
 class AddBook(QMainWindow):
     def __init__(self):
         super().__init__()
@@ -26,9 +29,9 @@ class AddBook(QMainWindow):
         con = sqlite3.connect("db_lib.sqlite")
         cur = con.cursor()
         if criterion == 'author':
-            res_find = cur.execute("""SELECT author FROM Authors""").fetchall()
+            res_find = library_db.select_table(AUTHORS, AUTHOR)
         else:
-            res_find = cur.execute("""SELECT genre FROM Genres""").fetchall()
+            res_find = library_db.select_table(GENRES, GENRE)
         inp_dialog, ok_pressed = QInputDialog.getItem(self, 'Выбор', 'Выбор',
                                                       tuple([i[0] for i in res_find]), 0, False)
         if ok_pressed:
@@ -62,25 +65,15 @@ class AddBook(QMainWindow):
             self.statusBar().showMessage('Пустая строка, введите заново')
             return None
 
-        con = sqlite3.connect("db_lib.sqlite")
-        cur = con.cursor()
-        res_check_name = cur.execute("""SELECT * FROM Authors
-                WHERE author =?""", (self.author,)).fetchone()
-        res_check_genre = cur.execute("""SELECT * FROM Genres
-                                WHERE genre =?""", (self.genre,)).fetchone()
+        res_check_name = library_db.select_one_with_aspect(AUTHORS, AUTHOR, self.author, '*')
+        res_check_genre = library_db.select_one_with_aspect(GENRES, GENRE, self.genre, '*')
         if res_check_name is None:
-            cur.execute("""INSERT INTO Authors(author) VALUES(?)""", (self.author,)).fetchall()
+            library_db.insert_for_name(AUTHORS, AUTHOR, self.author)
         if res_check_genre is None:
-            cur.execute("""INSERT INTO Genres(genre) VALUES(?)""", (self.genre,)).fetchall()
+            library_db.insert_for_name(GENRES, GENRE, self.genre)
 
-        cur.execute("""INSERT INTO Books(author_name, book, genre_name, description, year, path_image) 
-                VALUES(?, ?, ?, ?, ?, ?)""",
-                    (cur.execute(functions_for_add.paste('author'), (self.author,)).fetchone()[0], title,
-                     cur.execute(functions_for_add.paste('genre'), (self.genre,)).fetchone()[0], description,
-                     year,
-                     self.path))
-        con.commit()
-        con.close()
+        library_db.insert_for_books(self.author, title,
+                                    self.genre, description, year, self.path, True)
         self.statusBar().setStyleSheet("color : green")
         self.statusBar().showMessage('Книга успешно добавлена!')
         self.close()
