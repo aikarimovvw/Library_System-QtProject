@@ -31,7 +31,7 @@ class AddClient(QMainWindow):
             if password != password_db:
                 self.statusBar().showMessage('Неправильный пароль')
             else:
-                self.statusBar().setStyleSheet("color : green")
+                self.statusBar().setStyleSheet(GREEN_STATUS)
                 self.statusBar().showMessage('Успешно')
                 self.transition_home_wind.show()
                 self.close()

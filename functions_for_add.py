@@ -19,7 +19,7 @@ def check_year(year):
 
 
 def check_date(b_date):
-    b_date = datetime.strptime(b_date, "%Y-%m-%d")
+    b_date = datetime.strptime(b_date, FORMAT_YEAR)
     difference = datetime.today() - b_date
     if difference.days > 0:
         return True

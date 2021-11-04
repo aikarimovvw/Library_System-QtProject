@@ -24,10 +24,10 @@ class ShowDebtors(QWidget):
     def fill_debtors(self):
         functions_for_add.delete_operations()
         res_check_date = res_check_date = library_db.select_table(OPERATIONS,
-                                                                  'book_name', 'book_id', 'date_deadline',
-                                                                  'client_name', 'client_id')
+                                                                  BOOK_NAME, BOOK_ID, DATE_DEADLINE,
+                                                                  CLIENT_NAME, CLIENT_ID)
 
-        res_check_date = list(filter(lambda x: datetime.strptime(x[2], "%Y-%m-%d") < datetime.today(), res_check_date))
+        res_check_date = list(filter(lambda x: datetime.strptime(x[2], FORMAT_YEAR) < datetime.today(), res_check_date))
         table_row = 0
         self.tbl_wdgt_debtors.setRowCount(len(res_check_date))
         for i in res_check_date:

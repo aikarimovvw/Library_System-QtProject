@@ -25,7 +25,7 @@ class RegEmployee(QMainWindow):
         result_check_login = library_db.select_one_with_aspect(EMPLOYEE, LOGIN, login, '*')
         if result_check_login is None:
             library_db.insert_for_employee(login, password, number, name_employee)
-            self.statusBar().setStyleSheet("color : green")
+            self.statusBar().setStyleSheet(GREEN_STATUS)
             self.statusBar().showMessage('Данные занесены, можете продолжить вход')
             self.close()
 

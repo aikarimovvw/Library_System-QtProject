@@ -12,9 +12,6 @@ class ShowInf(QWidget):
 
     def __init__(self, *book_name):
         super().__init__()
-        self.initUI(book_name)
-
-    def initUI(self, book_name):
         uic.loadUi('show_information_book.ui', self)
         self.setWindowTitle('Отображение информации')
         book_name = book_name[1]

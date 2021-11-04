@@ -25,7 +25,7 @@ class AddClient(QMainWindow):
         res_check_client = library_db.select_one_with_aspect(CLIENTS, CLIENT_NUMBER, num_client, '*')
         if res_check_client is None:
             library_db.insert_for_clients(name, num_client, mail_client, address_client, b_date)
-            self.statusBar().setStyleSheet("color : green")
+            self.statusBar().setStyleSheet(GREEN_STATUS)
             self.statusBar().showMessage('Клиент успешно добавлен!')
             self.close()
         else:

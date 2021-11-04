@@ -147,7 +147,7 @@ class HomeScreen(QMainWindow):
             btn_show_inf_book = QtWidgets.QPushButton(book)
             btn_show_inf_book.clicked.connect(lambda btn, text=book: self.open_inf_book(text))
             lst_widget_for_book = QtWidgets.QListWidgetItem()
-            self.lst_wdgt_btn_books.setStyleSheet("WidgetItem:pressed")
+            self.lst_wdgt_btn_books.setStyleSheet(STYLE_PRESS)
             self.lst_wdgt_btn_books.addItem(lst_widget_for_book)
             self.lst_wdgt_btn_books.setItemWidget(lst_widget_for_book, btn_show_inf_book)
             self.lst_wdgt_btn_books.scrollToItem(lst_widget_for_book)
@@ -193,7 +193,7 @@ class HomeScreen(QMainWindow):
         number = self.ledit_num_get_id.text()
         value = library_db.select_one_with_aspect(CLIENTS, CLIENT_NUMBER, number, ID)
         if value is None:
-            self.statusBar().setStyleSheet("color : red")
+            self.statusBar().setStyleSheet(RED_STATUS)
             return self.statusBar().showMessage('Такого номера нет, введите заново, либо создайте аккаунт')
         self.ledit_out_id.setText(str(value[0]))
 
@@ -210,7 +210,7 @@ class HomeScreen(QMainWindow):
         date = res_books_upd[0][5].split('-')
         date = QDate(int(date[0]), int(date[1]), int(date[2]))  # year, month, day
         format_ = QTextCharFormat()
-        format_.setFont(QFont('Times', 15))
+        format_.setFont(QFont(FONT, 15))
         self.clndr_wdgt_add_date.setDateTextFormat(date, format_)
 
     def upd_client(self):
@@ -218,7 +218,7 @@ class HomeScreen(QMainWindow):
         num_client = self.ledit_update_num_c.text()
         mail_client = self.ledit_update_mail_c.text()
         address_client = self.ledit_update_adres.text()
-        b_date = self.clndr_wdgt_add_date.selectedDate().toString("yyyy-MM-dd")
+        b_date = self.clndr_wdgt_add_date.selectedDate().toString(DATE_YMD)
         if functions_for_add.check_clients(name, num_client, mail_client, address_client, b_date) is False:
             if functions_for_add.check_date(b_date) is False:
                 return self.statusBar().showMessage('Введите корректную дату рождения')
@@ -257,7 +257,7 @@ class HomeScreen(QMainWindow):
         login_search = self.ledit_search_empl_login.text()
         res_employ_upd = library_db.select_all_with_aspect(EMPLOYEE, LOGIN, login_search, '*')
         if len(res_employ_upd) == INPUT_LEN:
-            self.statusBar().setStyleSheet("color : red")
+            self.statusBar().setStyleSheet(RED_STATUS)
             return self.statusBar().showMessage('Введите корректный логин')
         self.ledit_update_pass_e.setText(res_employ_upd[0][1])
         self.ledit_update_name_e.setText(res_employ_upd[0][2])
@@ -273,7 +273,7 @@ class HomeScreen(QMainWindow):
             return self.statusBar().showMessage('Пустая строка, введите заново')
         if (login != self.ledit_search_empl_login.text()) and not (library_db.select_one_with_aspect(
                 EMPLOYEE, LOGIN, login, '*')) is None:
-            self.statusBar().setStyleSheet("color : red")
+            self.statusBar().setStyleSheet(RED_STATUS)
             return self.statusBar().showMessage('Пользователь с таким логином существует')
 
         library_db.update_employ_values((password, name_employee, number, login, self.ledit_search_empl_login.text(),))

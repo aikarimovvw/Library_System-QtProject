@@ -19,8 +19,17 @@ GENRE = 'genre'
 CLIENT_NAME = 'client_name'
 BOOK_NAME = 'book_name'
 AVAILABLE = 'available'
+BOOK_ID = 'book_id'
 AVAILABLE_TRUE = 1
 AVAILABLE_FALSE = 0
+RED_STATUS = "color : red"
+GREEN_STATUS = "color : green"
+FORMAT_YEAR = "%Y-%m-%d"
+DATE_YMD = '"yyyy-MM-dd"'
+DATE_DEADLINE = 'date_deadline'
+CLIENT_ID = 'client_id'
+FONT = 'Times'
+STYLE_PRESS = "WidgetItem:pressed"
 
 TABLES = {'Employee': ('id', 'password', 'name', 'number', 'login'),
           'Authors': ('id', 'author'),
