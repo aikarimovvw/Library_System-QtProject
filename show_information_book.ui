@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>556</width>
-    <height>721</height>
+    <height>767</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -22,7 +22,7 @@
      <x>10</x>
      <y>10</y>
      <width>321</width>
-     <height>421</height>
+     <height>431</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -172,9 +172,9 @@ font: 11pt &quot;Segoe UI&quot;;</string>
    <property name="geometry">
     <rect>
      <x>210</x>
-     <y>440</y>
+     <y>500</y>
      <width>141</width>
-     <height>31</height>
+     <height>21</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -222,14 +222,48 @@ font: 10pt &quot;Segoe UI&quot;;</string>
   <widget class="QTextEdit" name="txt_edit_description">
    <property name="geometry">
     <rect>
-     <x>0</x>
-     <y>480</y>
+     <x>10</x>
+     <y>530</y>
      <width>551</width>
      <height>241</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_availible">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>450</y>
+     <width>111</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);
+font: 87 16pt &quot;Segoe UI Black&quot;;</string>
+   </property>
+   <property name="text">
+    <string>Наличие:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_available">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>450</y>
+     <width>421</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 85, 0);
+font: 10pt &quot;Segoe UI&quot;;</string>
+   </property>
+   <property name="text">
+    <string/>
    </property>
   </widget>
  </widget>

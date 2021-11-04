@@ -1,9 +1,10 @@
 import sys
-import sqlite3
 
-from PyQt5.QtWidgets import QApplication, QMainWindow, QMessageBox
+from PyQt5.QtWidgets import QApplication, QMainWindow
 from PyQt5 import uic
 import functions_for_add
+import library_db
+from CONST_VALUES import *
 
 
 class RegEmployee(QMainWindow):
@@ -18,25 +19,14 @@ class RegEmployee(QMainWindow):
         password = self.ledit_pass.text()
         login = self.ledit_login.text()
 
-        login_check = functions_for_add.check_len(login)
-        pass_check = functions_for_add.check_len(password)
-        number_check = functions_for_add.check_len(number)
-        name_check = functions_for_add.check_len(name_employee)
-
-        if not any([login_check, pass_check, number_check, name_check]):
+        if functions_for_add.check_employee(name_employee, number, password, login) is False:
             self.statusBar().showMessage('Пустая строка, введите заново')
             return None
-
-        con = sqlite3.connect('db_lib.sqlite')
-        cur = con.cursor()
-        result_check_login = cur.execute("""SELECT * FROM Employee WHERE login = ?""", (login,)).fetchone()
+        result_check_login = library_db.select_one_with_aspect(EMPLOYEE, LOGIN, login, '*')
         if result_check_login is None:
-            cur.execute("""INSERT INTO Employee(login, password, number, name)  
-                                VALUES(?, ?, ?, ?)""", (login, password, number, name_employee)).fetchall()
+            library_db.insert_for_employee(login, password, number, name_employee)
             self.statusBar().setStyleSheet("color : green")
             self.statusBar().showMessage('Данные занесены, можете продолжить вход')
-            con.commit()
-            con.close()
             self.close()
 
         else:
