@@ -13,9 +13,6 @@ import functions_for_add
 class ShowDebtors(QWidget):
     def __init__(self):
         super().__init__()
-        self.initUI()
-
-    def initUI(self):
         uic.loadUi('debtors.ui', self)
         self.setWindowTitle('Отображение должников')
         self.fill_debtors()
@@ -31,7 +28,6 @@ class ShowDebtors(QWidget):
         table_row = 0
         self.tbl_wdgt_debtors.setRowCount(len(res_check_date))
         for i in res_check_date:
-            print(i)
             self.tbl_wdgt_debtors.setItem(table_row, 0, QtWidgets.QTableWidgetItem(i[0]))
             self.tbl_wdgt_debtors.setItem(table_row, 1, QtWidgets.QTableWidgetItem(str(i[1])))
             self.tbl_wdgt_debtors.setItem(table_row, 2, QtWidgets.QTableWidgetItem(i[2]))

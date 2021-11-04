@@ -33,8 +33,7 @@ background-color: rgb(75, 75, 75);</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">alternate-background-color: rgb(85, 255, 127);
-background-color: rgb(70, 212, 212);
+     <string notr="true">background-color: rgb(70, 212, 212);
 color: rgb(75, 75, 75);
 font: 14pt &quot;Segoe UI&quot;;
 border-radius: 5px;</string>
