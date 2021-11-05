@@ -67,7 +67,10 @@ EXTRADITION = 'Выдача'
 REFUND = 'Возврат'
 AUTHOR_RUS = 'Автор'
 DATA_IS_ENTERED = 'Данные занесены, можете продолжить вход'
+
 GET_ZERO_ELEMENT = 0
+
+# индексы для запросов к бд к разным таблицам
 ZERO_VALUE = 0
 FIRST_VALUE = 1
 SECOND_VALUE = 2
@@ -76,11 +79,15 @@ FOURTH_VALUE = 4
 FIFTH_VALUE = 5
 SIXTH_VALUE = 6
 SEVENTH_VALUE = 7
+
+# номера колонок в Table Widget
 ZERO_COLUMN = 0
 FIRST_COLUMN = 1
 SEC_COLUMN = 2
 THIRD_COLUMN = 3
 FOURTH_COLUMN = 4
+
+# Коннект Main Tab Widget c кнопками
 ZERO_TAB = 0
 FIRST_TAB = 1
 SECOND_TAB = 2
