@@ -195,7 +195,7 @@ class HomeScreen(QMainWindow):
     # все кнопки на 3 странице
     def buttons_clients_page(self):
         self.btn_main_clients.clicked.connect(self.open_clients)
-        self.btn_reload_clients_tab.clicked.connect(lambda btn, text='clients': self.tbl_update(text))
+        self.btn_reload_clients_tab.clicked.connect(lambda btn, text=CLIENTS: self.tbl_update(text))
         self.btn_search_client_num.clicked.connect(self.fill_client_val)
         self.btn_update_client.clicked.connect(self.upd_client)
         self.btn_del_client.clicked.connect(self.del_client)
@@ -214,7 +214,7 @@ class HomeScreen(QMainWindow):
     # Создание запроса с информацией о читателе, и заполнение нужных полей
     def fill_client_val(self):
         id_search = self.ledit_search_client_id.text()
-        res_books_upd = library_db.select_all_with_aspect(CLIENTS, ID, id_search, '*')
+        res_books_upd = library_db.select_all_with_aspect(CLIENTS, ID, id_search, ALL_VALUES)
         if len(res_books_upd) == INPUT_LEN:
             return self.statusBar().showMessage(MESS_CORRECT_NUM)
         # снизу идет заполнение данными строк из запроса res_books_upd
