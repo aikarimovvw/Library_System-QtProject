@@ -21,7 +21,7 @@ def check_year(year):
 def check_date(b_date):
     b_date = datetime.strptime(b_date, FORMAT_YEAR)
     difference = datetime.today() - b_date
-    if difference.days > 0:
+    if difference.days > DIFF_DAYS_CHECK_ZERO:
         return True
     else:
         return False
@@ -44,9 +44,9 @@ def check_clients(name, num_client, mail_client, address_client, b_date):
 def delete_operations():
     res_book = set(library_db.select_table(OPERATIONS, BOOK_NAME))
     for i, item in enumerate(res_book):
-        res_available = library_db.select_one_with_aspect(BOOKS, BOOK, item[0], AVAILABLE)
+        res_available = library_db.select_one_with_aspect(BOOKS, BOOK, item[ZERO_VALUE], AVAILABLE)
         if res_available[0] == AVAILABLE_TRUE:
-            library_db.delete_values(OPERATIONS, BOOK_NAME, item[0])
+            library_db.delete_values(OPERATIONS, BOOK_NAME, item[ZERO_VALUE])
 
 
 def check_employee(name_employee, number, password, login):

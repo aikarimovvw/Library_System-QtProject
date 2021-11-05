@@ -11,7 +11,7 @@ class AddClient(QMainWindow):
     def __init__(self):
         super().__init__()
         uic.loadUi('add_client.ui', self)
-        self.setWindowTitle('Добавление читателя')
+        self.setWindowTitle(WIND_ADD_CLIENT)
         self.btn_add_client.clicked.connect(self.save_client)
 
     def save_client(self):
@@ -19,26 +19,26 @@ class AddClient(QMainWindow):
         num_client = self.ledit_add_num_c.text()
         mail_client = self.ledit_add_mail_c.text()
         address_client = self.ledit_add_address.text()
-        b_date = self.clndr_wdgt_add_date.selectedDate().toString("yyyy-MM-dd")
+        b_date = self.clndr_wdgt_add_date.selectedDate().toString(DATE_YMD)
         if functions_for_add.check_clients(name, num_client, mail_client, address_client, b_date) is False:
-            return self.statusBar().showMessage('Введите корректные данные')
+            return self.statusBar().showMessage(INCORRECT_VALUES)
 
-        res_check_client = library_db.select_one_with_aspect(CLIENTS, CLIENT_NUMBER, num_client, '*')
+        res_check_client = library_db.select_one_with_aspect(CLIENTS, CLIENT_NUMBER, num_client, ALL_VALUES)
         if res_check_client is None:
             library_db.insert_for_clients(name, num_client, mail_client, address_client, b_date)
             self.statusBar().setStyleSheet(GREEN_STATUS)
-            self.statusBar().showMessage('Клиент успешно добавлен!')
+            self.statusBar().showMessage(ADD_CLIENT_COMPLETE)
             self.close()
         else:
-            self.statusBar().showMessage('Клиент с таким номером существует')
+            self.statusBar().showMessage(INCORRECT_CLIENT)
 
     def clear_all(self):
         self.statusBar().showMessage('')
         self.txt_edit_description.clear()
         self.ledit_title.clear()
         self.ledit_year.clear()
-        self.btn_look_authors.setText('Выбор автора')
-        self.btn_look_genres.setText('Выбор жанра')
+        self.btn_look_authors.setText(CHOICE_AUTHOR)
+        self.btn_look_genres.setText(CHOICE_GENRE)
 
 
 def except_hook(cls, exception, traceback):

@@ -13,23 +13,24 @@ class ShowInf(QWidget):
     def __init__(self, *book_name):
         super().__init__()
         uic.loadUi('show_information_book.ui', self)
-        self.setWindowTitle('Отображение информации')
-        book_name = book_name[1]
+        self.setWindowTitle(SHOW_INF)
+        book_name = book_name[FIRST_VALUE]
         self.label_name_book.setText(book_name)
 
         res_inf = library_db.select_all_with_aspect(BOOKS, BOOK, book_name, '*')
 
-        self.label_id.setText(str(res_inf[0][0]))
-        self.label_name_author.setText(res_inf[0][1])
-        self.label_name_genre.setText(res_inf[0][3])
-        self.label_pixmap.setPixmap(QPixmap(f"{res_inf[0][4]}"))
-        self.label_year.setText(str(res_inf[0][6]))
+        # далее я заполняю данными все значения, обращаюсь к каждому элемента через id
+        self.label_id.setText(str(res_inf[GET_ZERO_ELEMENT][ZERO_VALUE]))
+        self.label_name_author.setText(res_inf[GET_ZERO_ELEMENT][FIRST_VALUE])
+        self.label_name_genre.setText(res_inf[GET_ZERO_ELEMENT][THIRD_VALUE])
+        self.label_pixmap.setPixmap(QPixmap(f"{res_inf[GET_ZERO_ELEMENT][FOURTH_VALUE]}"))
+        self.label_year.setText(str(res_inf[GET_ZERO_ELEMENT][SIXTH_VALUE]))
         self.txt_edit_description.setEnabled(False)
-        self.txt_edit_description.setText(res_inf[0][5])
-        if res_inf[0][7] == 1:
-            self.lbl_available.setText('Есть в библиотеке')
+        self.txt_edit_description.setText(res_inf[GET_ZERO_ELEMENT][FIFTH_VALUE])
+        if res_inf[GET_ZERO_ELEMENT][SEVENTH_VALUE] == AVAILABLE_TRUE:
+            self.lbl_available.setText(AVAILABLE_IN_STOCK)
         else:
-            self.lbl_available.setText('На данный  момент книга в пользовании у читателя')
+            self.lbl_available.setText(NOT_AVAILABLE_IN_STOCK)
 
 
 if __name__ == '__main__':

@@ -12,7 +12,7 @@ class AddClient(QMainWindow):
     def __init__(self):
         super().__init__()
         uic.loadUi('authorization.ui', self)
-        self.setWindowTitle('Авторизация')
+        self.setWindowTitle(WIND_AUTHORIZATION)
         self.btn_reg.clicked.connect(self.reg_empl)
         self.reg_empl_wind = RegEmployee()
         self.transition_home_wind = HomeScreen()
@@ -25,15 +25,15 @@ class AddClient(QMainWindow):
         login_inp = self.ledit_login_e_enter.text()
         password_db = library_db.select_one_with_aspect(EMPLOYEE, LOGIN, login_inp, PASSWORD)
         if password_db is None:
-            self.statusBar().showMessage('Неверный логин')
+            self.statusBar().showMessage(INCORRECT_LOGIN)
         else:
             password = self.ledit_pass_e_enter.text()
-            password_db = password_db[0]
+            password_db = password_db[ZERO_VALUE]
             if password != password_db:
-                self.statusBar().showMessage('Неправильный пароль')
+                self.statusBar().showMessage(INCORRECT_PASSWORD)
             else:
                 self.statusBar().setStyleSheet(GREEN_STATUS)
-                self.statusBar().showMessage('Успешно')
+                self.statusBar().showMessage(SUCCESSFULLY)
                 self.transition_home_wind.show()
                 self.close()
 

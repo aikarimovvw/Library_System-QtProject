@@ -14,7 +14,7 @@ class ShowDebtors(QWidget):
     def __init__(self):
         super().__init__()
         uic.loadUi('debtors.ui', self)
-        self.setWindowTitle('Отображение должников')
+        self.setWindowTitle(SHOW_DEBTORS)
         self.fill_debtors()
         self.btn_save_csv.clicked.connect(self.save_csv)
 
@@ -24,15 +24,16 @@ class ShowDebtors(QWidget):
                                                                   BOOK_NAME, BOOK_ID, DATE_DEADLINE,
                                                                   CLIENT_NAME, CLIENT_ID)
 
-        res_check_date = list(filter(lambda x: datetime.strptime(x[2], FORMAT_YEAR) < datetime.today(), res_check_date))
+        res_check_date = list(
+            filter(lambda x: datetime.strptime(x[SECOND_VALUE], FORMAT_YEAR) < datetime.today(), res_check_date))
         table_row = 0
         self.tbl_wdgt_debtors.setRowCount(len(res_check_date))
         for i in res_check_date:
-            self.tbl_wdgt_debtors.setItem(table_row, 0, QtWidgets.QTableWidgetItem(i[0]))
-            self.tbl_wdgt_debtors.setItem(table_row, 1, QtWidgets.QTableWidgetItem(str(i[1])))
-            self.tbl_wdgt_debtors.setItem(table_row, 2, QtWidgets.QTableWidgetItem(i[2]))
-            self.tbl_wdgt_debtors.setItem(table_row, 3, QtWidgets.QTableWidgetItem(i[3]))
-            self.tbl_wdgt_debtors.setItem(table_row, 4, QtWidgets.QTableWidgetItem(str(i[4])))
+            self.tbl_wdgt_debtors.setItem(table_row, ZERO_COLUMN, QtWidgets.QTableWidgetItem(i[ZERO_VALUE]))
+            self.tbl_wdgt_debtors.setItem(table_row, FIRST_COLUMN, QtWidgets.QTableWidgetItem(str(i[FIRST_VALUE])))
+            self.tbl_wdgt_debtors.setItem(table_row, SEC_COLUMN, QtWidgets.QTableWidgetItem(i[SECOND_VALUE]))
+            self.tbl_wdgt_debtors.setItem(table_row, THIRD_COLUMN, QtWidgets.QTableWidgetItem(i[THIRD_VALUE]))
+            self.tbl_wdgt_debtors.setItem(table_row, FOURTH_COLUMN, QtWidgets.QTableWidgetItem(str(i[FOURTH_VALUE])))
             table_row += 1
 
     def save_csv(self):

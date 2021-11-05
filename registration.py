@@ -11,7 +11,7 @@ class RegEmployee(QMainWindow):
     def __init__(self):
         super().__init__()
         uic.loadUi('reg.ui', self)
-        self.setWindowTitle('Регистрация')
+        self.setWindowTitle(REGISTRATION_WIND)
         self.btn_save_new_empl.clicked.connect(self.sign_new_employee)
 
     def sign_new_employee(self):
@@ -21,17 +21,17 @@ class RegEmployee(QMainWindow):
         login = self.ledit_login.text()
 
         if functions_for_add.check_employee(name_employee, number, password, login) is False:
-            self.statusBar().showMessage('Пустая строка, введите заново')
+            self.statusBar().showMessage(LEN_ZERO)
             return None
-        result_check_login = library_db.select_one_with_aspect(EMPLOYEE, LOGIN, login, '*')
+        result_check_login = library_db.select_one_with_aspect(EMPLOYEE, LOGIN, login, ALL_VALUES)
         if result_check_login is None:
             library_db.insert_for_employee(login, password, number, name_employee)
             self.statusBar().setStyleSheet(GREEN_STATUS)
-            self.statusBar().showMessage('Данные занесены, можете продолжить вход')
+            self.statusBar().showMessage(DATA_IS_ENTERED)
             self.close()
 
         else:
-            self.statusBar().showMessage('Такой пользователь уже существует')
+            self.statusBar().showMessage(INCORRECT_USER)
 
 
 def except_hook(cls, exception, traceback):
