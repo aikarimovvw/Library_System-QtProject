@@ -90,7 +90,7 @@
       ![image](https://user-images.githubusercontent.com/74866695/140483201-3a1c94bd-87eb-4834-a4b7-c9867986df7d.png)
       
 
-      4) При нажатии на кнопку "Сотрудники":
+   4) При нажатии на кнопку "Сотрудники":
       При нажатии на tabwidget 'Добавить сотрудника', вы можете добавить нового пользователя:
       
       ![image](https://user-images.githubusercontent.com/74866695/140483548-1656c509-ebd3-42cc-b82a-d5cd08d05d6c.png)
