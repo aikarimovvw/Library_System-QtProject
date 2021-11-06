@@ -81,7 +81,7 @@ def update_book_available(values):
         cur.execute(
             """UPDATE Books SET available=? WHERE id=? """, (available, values[FIRST_VALUE],))
     else:
-        available = AVAILABLE_FALSE
+        available = AVAILABLE_TRUE
         cur.execute(
             """UPDATE Books SET available=? WHERE id=? """, (available, values[FIRST_VALUE],))
     con.commit()

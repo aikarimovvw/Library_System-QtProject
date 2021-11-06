@@ -5,14 +5,15 @@ from PyQt5.QtWidgets import QApplication, QLabel, QWidget
 from PyQt5 import uic
 import library_db
 from CONST_VALUES import *
+from show_inf_book_design import Ui_widget
 
 
-class ShowInf(QWidget):
+class ShowInf(QWidget, Ui_widget):
     book_name = "t"
 
     def __init__(self, *book_name):
         super().__init__()
-        uic.loadUi('show_information_book.ui', self)
+        self.setupUi(self)
         self.setWindowTitle(SHOW_INF)
         book_name = book_name[FIRST_VALUE]
         self.label_name_book.setText(book_name)

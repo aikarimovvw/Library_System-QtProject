@@ -1,5 +1,4 @@
 INPUT_LEN = 0
-DATE = 0
 ALL_VALUES = '*'
 EMPLOYEE = 'Employee'
 AUTHORS = 'Authors'

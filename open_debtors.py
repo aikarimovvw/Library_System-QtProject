@@ -8,12 +8,13 @@ from CONST_VALUES import *
 import csv
 from datetime import datetime
 import functions_for_add
+from debtors_design import Ui_Form
 
 
-class ShowDebtors(QWidget):
+class ShowDebtors(QWidget, Ui_Form):
     def __init__(self):
         super().__init__()
-        uic.loadUi('debtors.ui', self)
+        self.setupUi(self)
         self.setWindowTitle(SHOW_DEBTORS)
         self.fill_debtors()
         self.btn_save_csv.clicked.connect(self.save_csv)
@@ -23,7 +24,6 @@ class ShowDebtors(QWidget):
         res_check_date = res_check_date = library_db.select_table(OPERATIONS,
                                                                   BOOK_NAME, BOOK_ID, DATE_DEADLINE,
                                                                   CLIENT_NAME, CLIENT_ID)
-
         res_check_date = list(
             filter(lambda x: datetime.strptime(x[SECOND_VALUE], FORMAT_YEAR) < datetime.today(), res_check_date))
         table_row = 0

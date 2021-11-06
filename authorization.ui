@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>712</width>
-    <height>413</height>
+    <width>711</width>
+    <height>412</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,29 +17,10 @@
    <string notr="true">background-color: rgb(75, 75, 75);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="btn_enter">
-    <property name="geometry">
-     <rect>
-      <x>240</x>
-      <y>170</y>
-      <width>171</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 85, 0);
-color: rgb(75, 75, 75);
-font: 9pt &quot;Segoe UI&quot;;
-border-radius: 5px;</string>
-    </property>
-    <property name="text">
-     <string>Войти</string>
-    </property>
-   </widget>
    <widget class="QLineEdit" name="ledit_login_e_enter">
     <property name="geometry">
      <rect>
-      <x>200</x>
+      <x>220</x>
       <y>60</y>
       <width>261</width>
       <height>41</height>
@@ -57,8 +38,8 @@ border-radius: 5px;</string>
    <widget class="QLineEdit" name="ledit_pass_e_enter">
     <property name="geometry">
      <rect>
-      <x>200</x>
-      <y>110</y>
+      <x>220</x>
+      <y>120</y>
       <width>261</width>
       <height>41</height>
      </rect>
@@ -72,11 +53,30 @@ border-radius: 5px;</string>
      <string>Введите пароль</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="btn_enter">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>180</y>
+      <width>171</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 85, 0);
+color: rgb(75, 75, 75);
+font: 9pt &quot;Segoe UI&quot;;
+border-radius: 5px;</string>
+    </property>
+    <property name="text">
+     <string>Войти</string>
+    </property>
+   </widget>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>230</x>
-      <y>230</y>
+      <x>250</x>
+      <y>220</y>
       <width>221</width>
       <height>51</height>
      </rect>
@@ -91,8 +91,8 @@ border-radius: 5px;</string>
    <widget class="QPushButton" name="btn_reg">
     <property name="geometry">
      <rect>
-      <x>260</x>
-      <y>310</y>
+      <x>280</x>
+      <y>290</y>
       <width>121</width>
       <height>31</height>
      </rect>
@@ -113,8 +113,8 @@ border-radius: 5px;</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>712</width>
-     <height>26</height>
+     <width>711</width>
+     <height>21</height>
     </rect>
    </property>
   </widget>

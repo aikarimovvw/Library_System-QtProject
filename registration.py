@@ -5,12 +5,13 @@ from PyQt5 import uic
 import functions_for_add
 import library_db
 from CONST_VALUES import *
+from reg_design import Ui_MainWindow
 
 
-class RegEmployee(QMainWindow):
+class RegEmployee(QMainWindow, Ui_MainWindow):
     def __init__(self):
         super().__init__()
-        uic.loadUi('reg.ui', self)
+        self.setupUi(self)
         self.setWindowTitle(REGISTRATION_WIND)
         self.btn_save_new_empl.clicked.connect(self.sign_new_employee)
 

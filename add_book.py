@@ -6,13 +6,14 @@ from PyQt5 import uic
 import functions_for_add
 import library_db
 from CONST_VALUES import *
+from add_book_design import Ui_MainWindow
 
 
 # окно для добавления книги
-class AddBook(QMainWindow):
+class AddBook(QMainWindow, Ui_MainWindow):
     def __init__(self):
         super().__init__()
-        uic.loadUi('add_book.ui', self)
+        self.setupUi(self)
         self.setWindowTitle(ADD_BOOK)
         self.btn_save.clicked.connect(self.save_book)
         self.btn_load_img.clicked.connect(self.load_image)

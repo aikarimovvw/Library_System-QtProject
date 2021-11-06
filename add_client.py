@@ -4,13 +4,14 @@ from PyQt5 import uic
 import functions_for_add
 import library_db
 from CONST_VALUES import *
+from add_client_design import Ui_MainWindow
 
 
 # окно для добавления читателя
-class AddClient(QMainWindow):
+class AddClient(QMainWindow, Ui_MainWindow):
     def __init__(self):
         super().__init__()
-        uic.loadUi('add_client.ui', self)
+        self.setupUi(self)
         self.setWindowTitle(WIND_ADD_CLIENT)
         self.btn_add_client.clicked.connect(self.save_client)
 

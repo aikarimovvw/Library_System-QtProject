@@ -13,15 +13,16 @@ import library_db
 from CONST_VALUES import *
 import functions_for_add
 import datetime
+from home_design import Ui_MainWindow
 
 
-class HomeScreen(QMainWindow):
+class HomeScreen(QMainWindow, Ui_MainWindow):
     def __init__(self):
         super().__init__()
         self.add_client_win = AddClient()
         self.add_book_win = AddBook()
         self.show_debtors = ShowDebtors()
-        uic.loadUi('home.ui', self)
+        self.setupUi(self)
         self.setWindowTitle(MAIN_WINDOW)
         self.tbl_wdgt.tabBar().setVisible(False)
 
@@ -106,7 +107,7 @@ class HomeScreen(QMainWindow):
         if res_book is None or res_client is None:
             return self.statusBar().showMessage(WRONG_ID)
 
-        available = int(res_book[7])
+        available = int(res_book[SEVENTH_VALUE])
 
         if type_operation == REFUND and available == AVAILABLE_TRUE:
             return self.statusBar().showMessage(AVAILABLE_IN_STOCK)
@@ -126,7 +127,7 @@ class HomeScreen(QMainWindow):
 
         if type_operation == REFUND and available == AVAILABLE_FALSE:
             library_db.insert_to_operations(
-                book_name, id_book, type_operation, date_today, DATE, client_name, id_client)
+                book_name, id_book, type_operation, date_today, date_today, client_name, id_client)
         self.tbl_update(OPERATIONS)
 
     # Функционал на странице 2:
@@ -174,7 +175,7 @@ class HomeScreen(QMainWindow):
         self.ledit_update_title.setText(res_books_upd[GET_ZERO_ELEMENT][SECOND_VALUE])
         self.ledit_update_year.setText(str(res_books_upd[GET_ZERO_ELEMENT][SIXTH_VALUE]))
         self.ledit_update_genre.setText(res_books_upd[GET_ZERO_ELEMENT][THIRD_VALUE])
-        self.ledit_update_author.setText(res_books_upd[GET_ZERO_ELEMENT][FIFTH_VALUE])
+        self.ledit_update_author.setText(res_books_upd[GET_ZERO_ELEMENT][FIRST_VALUE])
         self.txt_edit_update_desc.setText(res_books_upd[GET_ZERO_ELEMENT][FIFTH_VALUE])
 
     # Обновление значений книги
@@ -223,7 +224,7 @@ class HomeScreen(QMainWindow):
         self.ledit_update_mail_c.setText(res_books_upd[GET_ZERO_ELEMENT][THIRD_VALUE])
         self.ledit_update_adres.setText(res_books_upd[GET_ZERO_ELEMENT][FOURTH_VALUE])
         date = res_books_upd[GET_ZERO_ELEMENT][FIFTH_VALUE].split('-')
-        date = QDate(int(date[ZERO_VALUE]), int(date[FIFTH_VALUE]), int(date[SECOND_VALUE]))  # year, month, day
+        date = QDate(int(date[ZERO_VALUE]), int(date[FIRST_VALUE]), int(date[SECOND_VALUE]))  # year, month, day
         format_ = QTextCharFormat()
         format_.setFont(QFont(FONT, 15))
         self.clndr_wdgt_add_date.setDateTextFormat(date, format_)

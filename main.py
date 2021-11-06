@@ -7,3 +7,4 @@ app.setStyle('Fusion')
 ex = AddClient()
 ex.show()
 sys.exit(app.exec())
+

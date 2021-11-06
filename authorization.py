@@ -1,17 +1,18 @@
 import sys
 
 from PyQt5.QtWidgets import QApplication, QMainWindow
-from PyQt5 import uic
+from PyQt5 import QtWidgets
 from registration import RegEmployee
 from home import HomeScreen
 import library_db
 from CONST_VALUES import *
+from authorization_des import Ui_MainWindow
 
 
-class AddClient(QMainWindow):
+class AddClient(QMainWindow, Ui_MainWindow):
     def __init__(self):
         super().__init__()
-        uic.loadUi('authorization.ui', self)
+        self.setupUi(self)
         self.setWindowTitle(WIND_AUTHORIZATION)
         self.btn_reg.clicked.connect(self.reg_empl)
         self.reg_empl_wind = RegEmployee()
