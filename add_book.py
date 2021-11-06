@@ -18,13 +18,13 @@ class AddBook(QMainWindow):
         self.btn_load_img.clicked.connect(self.load_image)
         self.btn_look_authors.clicked.connect(lambda btn, text=AUTHOR: self.viewing_content(text))
         self.btn_look_genres.clicked.connect(lambda btn, text=GENRE: self.viewing_content(text))
-        self.author = ''
-        self.genre = ''
+        self.author = EMPTY_LINE
+        self.genre = EMPTY_LINE
         self.path = 'cover/default_cover.png'
 
     # загрузка изображения
     def load_image(self):
-        self.path = QFileDialog.getOpenFileName(self, PUT_IMAGE, '')[0]
+        self.path = QFileDialog.getOpenFileName(self, PUT_IMAGE, EMPTY_LINE)[ZERO_VALUE]
 
     # при нажатии на кнопку Жанр, Выбор, появляются диалоговые окна с выбором автора/жанра
     def viewing_content(self, criterion):
@@ -33,7 +33,7 @@ class AddBook(QMainWindow):
         else:
             res_find = library_db.select_table(GENRES, GENRE)
         inp_dialog, ok_pressed = QInputDialog.getItem(self, CHOICE, CHOICE,
-                                                      tuple([i[0] for i in res_find]), 0, False)
+                                                      tuple([i[ZERO_VALUE] for i in res_find]), ZERO_VALUE, False)
         if ok_pressed:
             if criterion == GENRE:
                 self.btn_look_genres.setText(inp_dialog)
@@ -46,9 +46,9 @@ class AddBook(QMainWindow):
     def save_book(self):
         title = self.ledit_title.text()
         year = self.ledit_year.text()
-        if self.ledit_author.text() != '':
+        if self.ledit_author.text() != EMPTY_LINE:
             self.author = self.ledit_author.text()
-        if self.ledit_genre.text() != '':
+        if self.ledit_genre.text() != EMPTY_LINE:
             self.genre = self.ledit_genre.text()
 
         description = self.txt_edit_description.toPlainText()
@@ -63,8 +63,8 @@ class AddBook(QMainWindow):
         else:
             return self.statusBar().showMessage(LEN_ZERO)
 
-        res_check_name = library_db.select_one_with_aspect(AUTHORS, AUTHOR, self.author, '*')
-        res_check_genre = library_db.select_one_with_aspect(GENRES, GENRE, self.genre, '*')
+        res_check_name = library_db.select_one_with_aspect(AUTHORS, AUTHOR, self.author, ALL_VALUES)
+        res_check_genre = library_db.select_one_with_aspect(GENRES, GENRE, self.genre, ALL_VALUES)
         if res_check_name is None:
             library_db.insert_for_name(AUTHORS, AUTHOR, self.author)
         if res_check_genre is None:
@@ -77,7 +77,7 @@ class AddBook(QMainWindow):
         self.close()
 
     def clear_all(self):
-        self.statusBar().showMessage('')
+        self.statusBar().showMessage(EMPTY_LINE)
         self.txt_edit_description.clear()
         self.ledit_title.clear()
         self.ledit_year.clear()

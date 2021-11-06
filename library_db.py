@@ -1,4 +1,5 @@
 import sqlite3
+from CONST_VALUES import *
 
 con = sqlite3.connect('db_lib.sqlite')
 cur = con.cursor()
@@ -74,15 +75,15 @@ def update_employ_values(values):
 
 
 def update_book_available(values):
-    available = values[0]
-    if available == 0:
-        available = 1
+    available = values[ZERO_VALUE]
+    if available == AVAILABLE_TRUE:
+        available = AVAILABLE_FALSE
         cur.execute(
-            """UPDATE Books SET available=? WHERE id=? """, (available, values[1],))
+            """UPDATE Books SET available=? WHERE id=? """, (available, values[FIRST_VALUE],))
     else:
-        available = 0
+        available = AVAILABLE_FALSE
         cur.execute(
-            """UPDATE Books SET available=? WHERE id=? """, (available, values[1],))
+            """UPDATE Books SET available=? WHERE id=? """, (available, values[FIRST_VALUE],))
     con.commit()
 
 

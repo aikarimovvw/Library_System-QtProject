@@ -45,7 +45,7 @@ def delete_operations():
     res_book = set(library_db.select_table(OPERATIONS, BOOK_NAME))
     for i, item in enumerate(res_book):
         res_available = library_db.select_one_with_aspect(BOOKS, BOOK, item[ZERO_VALUE], AVAILABLE)
-        if res_available[0] == AVAILABLE_TRUE:
+        if res_available[ZERO_VALUE] == AVAILABLE_TRUE:
             library_db.delete_values(OPERATIONS, BOOK_NAME, item[ZERO_VALUE])
 
 
