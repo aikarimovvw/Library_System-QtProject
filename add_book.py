@@ -26,9 +26,8 @@ class AddBook(QMainWindow):
     def load_image(self):
         self.path = QFileDialog.getOpenFileName(self, PUT_IMAGE, '')[0]
 
+    # при нажатии на кнопку Жанр, Выбор, появляются диалоговые окна с выбором автора/жанра
     def viewing_content(self, criterion):
-        con = sqlite3.connect("db_lib.sqlite")
-        cur = con.cursor()
         if criterion == AUTHOR:
             res_find = library_db.select_table(AUTHORS, AUTHOR)
         else:
@@ -60,11 +59,9 @@ class AddBook(QMainWindow):
 
         if all([title_check, genre_check, author_check]):
             if not year_check:
-                self.statusBar().showMessage(CORRECT_DATE_PUB)
-                return None
+                return self.statusBar().showMessage(CORRECT_DATE_PUB)
         else:
-            self.statusBar().showMessage(LEN_ZERO)
-            return None
+            return self.statusBar().showMessage(LEN_ZERO)
 
         res_check_name = library_db.select_one_with_aspect(AUTHORS, AUTHOR, self.author, '*')
         res_check_genre = library_db.select_one_with_aspect(GENRES, GENRE, self.genre, '*')
