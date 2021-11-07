@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>501</width>
+    <height>527</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(75, 75, 75);</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>20</y>
+     <width>481</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 14pt &quot;Segoe UI&quot;;
+color: rgb(255, 0, 0);</string>
+   </property>
+   <property name="text">
+    <string>Список должников</string>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="tbl_wdgt_debtors">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>70</y>
+     <width>501</width>
+     <height>401</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(143, 143, 143);
+border-radius: 5px;</string>
+   </property>
+   <column>
+    <property name="text">
+     <string>Название книги</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>id книги</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Дедлайн</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Имя клиента</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>id клиента</string>
+    </property>
+   </column>
+  </widget>
+  <widget class="QPushButton" name="btn_save_csv">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>490</y>
+     <width>321</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(75, 75, 75);
+font: 9pt &quot;Segoe UI&quot;;
+border-radius: 5px;</string>
+   </property>
+   <property name="text">
+    <string>Сохранить в CSV</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
