@@ -27,7 +27,7 @@ def insert_for_employee(*values):
 
 
 def insert_for_books(*values):
-    cur.execute("""INSERT INTO Books(author_name, book, genre_name, description, year, path_image, availible) 
+    cur.execute("""INSERT INTO Books(author_name, book, genre_name, description, year, path_image, available) 
                     VALUES(?, ?, ?, ?, ?, ?, ?)""", values).fetchall()
     con.commit()
 
