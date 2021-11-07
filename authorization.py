@@ -1,12 +1,11 @@
 import sys
 
 from PyQt5.QtWidgets import QApplication, QMainWindow
-from PyQt5 import QtWidgets
 from registration import RegEmployee
 from home import HomeScreen
 import library_db
 from CONST_VALUES import *
-from authorization_des import Ui_MainWindow
+from py_designs.authorization_des import Ui_MainWindow
 
 
 class AddClient(QMainWindow, Ui_MainWindow):

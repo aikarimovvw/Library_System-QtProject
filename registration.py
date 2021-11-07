@@ -1,11 +1,10 @@
 import sys
 
 from PyQt5.QtWidgets import QApplication, QMainWindow
-from PyQt5 import uic
 import functions_for_add
 import library_db
 from CONST_VALUES import *
-from reg_design import Ui_MainWindow
+from py_designs.reg_design import Ui_MainWindow
 
 
 class RegEmployee(QMainWindow, Ui_MainWindow):

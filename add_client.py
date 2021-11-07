@@ -1,10 +1,9 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QMainWindow, QInputDialog
-from PyQt5 import uic
+from PyQt5.QtWidgets import QApplication, QMainWindow
 import functions_for_add
 import library_db
 from CONST_VALUES import *
-from add_client_design import Ui_MainWindow
+from py_designs.add_client_design import Ui_MainWindow
 
 
 # окно для добавления читателя

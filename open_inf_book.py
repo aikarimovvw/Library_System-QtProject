@@ -1,11 +1,10 @@
 import sys
 
 from PyQt5.QtGui import QPixmap
-from PyQt5.QtWidgets import QApplication, QLabel, QWidget
-from PyQt5 import uic
+from PyQt5.QtWidgets import QApplication, QWidget
 import library_db
 from CONST_VALUES import *
-from show_inf_book_design import Ui_widget
+from py_designs.show_inf_book_design import Ui_widget
 
 
 class ShowInf(QWidget, Ui_widget):

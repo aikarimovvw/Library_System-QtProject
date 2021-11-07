@@ -3,7 +3,6 @@ from PyQt5 import QtWidgets
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 from PyQt5.QtSql import QSqlDatabase, QSqlTableModel
-from PyQt5 import uic
 import sys
 from add_book import AddBook
 from add_client import AddClient
@@ -13,7 +12,7 @@ import library_db
 from CONST_VALUES import *
 import functions_for_add
 import datetime
-from home_design import Ui_MainWindow
+from py_designs.home_design import Ui_MainWindow
 
 
 class HomeScreen(QMainWindow, Ui_MainWindow):

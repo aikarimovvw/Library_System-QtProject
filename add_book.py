@@ -1,12 +1,10 @@
 import sys
-import sqlite3
 from PyQt5.QtWidgets import QApplication, QMainWindow, QInputDialog
 from PyQt5.QtWidgets import QFileDialog
-from PyQt5 import uic
 import functions_for_add
 import library_db
 from CONST_VALUES import *
-from add_book_design import Ui_MainWindow
+from py_designs.add_book_design import Ui_MainWindow
 
 
 # окно для добавления книги

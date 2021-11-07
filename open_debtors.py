@@ -2,13 +2,12 @@ import sys
 
 from PyQt5.QtWidgets import *
 from PyQt5 import QtWidgets
-from PyQt5 import uic
-import library_db
 from CONST_VALUES import *
 import csv
 from datetime import datetime
 import functions_for_add
-from debtors_design import Ui_Form
+import library_db
+from py_designs.debtors_design import Ui_Form
 
 
 class ShowDebtors(QWidget, Ui_Form):
